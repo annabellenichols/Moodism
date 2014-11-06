@@ -2,6 +2,13 @@ body {
     background: #42444d;
 }
 
+.home span.icon {
+    background: url("images/home.png") no-repeat;
+    float: left;
+    width: 10px;
+    height: 40px;
+}
+
 form {
     margin-top: 200px;
 }
