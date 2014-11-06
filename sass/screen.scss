@@ -7,6 +7,7 @@
 
 $background-color: #42444d;
 $main-green: #a5e8c8;
+$font-family: fantasy;
 
 body{
 	background-color: $background-color;
@@ -18,4 +19,43 @@ p{
 
 h1{
 	color: $main-green;
+	font-family: $font-family;
+	font-size: 100px;
+	font-style: italic;
+}
+
+.side {
+    display: block;
+    margin-bottom: 20px;
+    color: blue;
+    border-radius: 50%;
+    border: 0px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+}
+
+form {
+    margin-top: 200px;
+}
+
+.answer {
+    display: block;
+    margin: 20px auto 20px auto;
+    width: 200px;
+    height: 60px;
+    font-family: fantasy;
+    font-size: 30px;
+}
+
+p {
+    text-align: center;
+    color: #a5e8c8;
+    font-family: fantasy;
+    font-size: 35px;
+}
+
+#continue {
+    position: relative;
+    top: 65px;
 }

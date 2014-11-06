@@ -67,44 +67,61 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 11, ../sass/screen.scss */
+/* line 12, ../sass/screen.scss */
 body {
   background-color: #42444d;
 }
 
-/* line 15, ../sass/screen.scss */
+/* line 16, ../sass/screen.scss */
 p {
-    text-align: center;
-    color: #a5e8c8;
-    font-family: fantasy;
-    font-size: 35px;
+  font-color: #a5e8c8;
 }
 
-/* line 19, ../sass/screen.scss */
+/* line 20, ../sass/screen.scss */
 h1 {
   color: #a5e8c8;
+  font-family: fantasy;
+  font-size: 100px;
+  font-style: italic;
 }
 
-.answer {
-    display: block;
-    margin: 20px auto 20px auto;
-    width: 200px;
-    height: 60px;
-    font-family: fantasy;
-    font-size: 30px;
-}
-
-form {
-    margin-top: 200px;
-}
-
+/* line 27, ../sass/screen.scss */
 .side {
-    display: block;
-    color: blue;
-    border-radius: 50%;
+  display: block;
+  margin-bottom: 20px;
+  color: blue;
+  border-radius: 50%;
+  border: 0px;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
 }
 
+/* line 38, ../sass/screen.scss */
+form {
+  margin-top: 200px;
+}
+
+/* line 42, ../sass/screen.scss */
+.answer {
+  display: block;
+  margin: 20px auto 20px auto;
+  width: 200px;
+  height: 60px;
+  font-family: fantasy;
+  font-size: 30px;
+}
+
+/* line 51, ../sass/screen.scss */
+p {
+  text-align: center;
+  color: #a5e8c8;
+  font-family: fantasy;
+  font-size: 35px;
+}
+
+/* line 58, ../sass/screen.scss */
 #continue {
-    position: relative;
-    top: 65px;
+  position: relative;
+  top: 65px;
 }
