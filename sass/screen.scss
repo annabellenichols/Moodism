@@ -6,10 +6,14 @@
 @import "compass/reset";
 
 $background-color: #42444d;
-$main-green: #FF0000;
+$main-green: #a5e8c8;
 
 body{
 	background-color: $background-color;
+}
+
+p{
+	font-color: $main-green;
 }
 
 h1{

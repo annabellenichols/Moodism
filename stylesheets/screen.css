@@ -73,6 +73,38 @@ body {
 }
 
 /* line 15, ../sass/screen.scss */
+p {
+    text-align: center;
+    color: #a5e8c8;
+    font-family: fantasy;
+    font-size: 35px;
+}
+
+/* line 19, ../sass/screen.scss */
 h1 {
-  color: #FF0000;
+  color: #a5e8c8;
+}
+
+.answer {
+    display: block;
+    margin: 20px auto 20px auto;
+    width: 200px;
+    height: 60px;
+    font-family: fantasy;
+    font-size: 30px;
+}
+
+form {
+    margin-top: 200px;
+}
+
+.side {
+    display: block;
+    color: blue;
+    border-radius: 50%;
+}
+
+#continue {
+    position: relative;
+    top: 65px;
 }
