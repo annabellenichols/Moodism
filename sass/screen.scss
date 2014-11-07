@@ -47,6 +47,8 @@ form {
 .prompt {
     margin-top: 10%;
 }
+.options{
+}
 .answer {
     display: block;
     margin: 20px auto 20px auto;
@@ -55,7 +57,8 @@ form {
     font-family: fantasy;
     font-size: 30px;
 }
-#continue {
+.continue {
+    @extend .answer;
     position: relative;
     margin-top: 30px;
 }
