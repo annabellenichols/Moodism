@@ -13,10 +13,6 @@ body{
 	background-color: $background-color;
 }
 
-p{
-	font-color: $main-green;
-}
-
 h1{
 	color: $main-green;
 	font-family: $font-family;
@@ -36,7 +32,7 @@ h1{
 }
 
 form {
-    margin-top: 200px;
+    margin-top: 10%;
 }
 
 .answer {
@@ -50,7 +46,7 @@ form {
 
 p {
     text-align: center;
-    color: #a5e8c8;
+    color: $main-green;
     font-family: fantasy;
     font-size: 35px;
 }
