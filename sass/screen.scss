@@ -19,8 +19,12 @@ h1{
 	font-size: 100px;
 	font-style: italic;
 }
-
-// positioning and sizing for left and right side bars
+p {
+    text-align: center;
+    color: $main-green;
+    font-family: fantasy;
+    font-size: 35px;
+}
 .side {
     display: block;
     margin-bottom: 20px;
@@ -31,7 +35,9 @@ h1{
     height: 40px;
     font-size: 30px;
 }
-
+.prompt{
+    margin-top: 10%;
+}
 form {
     margin-top: 10%;
 }
@@ -43,13 +49,6 @@ form {
     height: 60px;
     font-family: fantasy;
     font-size: 30px;
-}
-
-p {
-    text-align: center;
-    color: $main-green;
-    font-family: fantasy;
-    font-size: 35px;
 }
 
 #continue {
