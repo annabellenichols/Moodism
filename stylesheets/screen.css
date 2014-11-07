@@ -80,7 +80,7 @@ h1 {
   font-style: italic;
 }
 
-/* line 23, ../sass/screen.scss */
+/* line 24, ../sass/screen.scss */
 .side {
   display: block;
   margin-bottom: 20px;
@@ -92,12 +92,12 @@ h1 {
   font-size: 30px;
 }
 
-/* line 34, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 form {
   margin-top: 10%;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 .answer {
   display: block;
   margin: 20px auto 20px auto;
@@ -107,7 +107,7 @@ form {
   font-size: 30px;
 }
 
-/* line 47, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 p {
   text-align: center;
   color: #a5e8c8;
@@ -115,7 +115,7 @@ p {
   font-size: 35px;
 }
 
-/* line 54, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 #continue {
   position: relative;
   top: 65px;
