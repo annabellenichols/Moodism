@@ -68,12 +68,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 12, ../sass/screen.scss */
+/* line 13, ../sass/screen.scss */
 body {
   background-color: #42444d;
 }
 
-/* line 15, ../sass/screen.scss */
+/* line 16, ../sass/screen.scss */
 h1, #title {
   color: #a5e8c8;
   font-family: fantasy;
@@ -82,7 +82,7 @@ h1, #title {
   padding-top: 20px;
 }
 
-/* line 22, ../sass/screen.scss */
+/* line 23, ../sass/screen.scss */
 h2 {
   text-align: center;
   color: #a5e8c8;
@@ -90,7 +90,7 @@ h2 {
   font-size: 35px;
 }
 
-/* line 28, ../sass/screen.scss */
+/* line 29, ../sass/screen.scss */
 p {
   text-align: center;
   color: #a5e8c8;
@@ -98,12 +98,12 @@ p {
   font-size: 20px;
 }
 
-/* line 34, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 form {
   margin-top: 3%;
 }
 
-/* line 37, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 .side {
   display: block;
   margin-bottom: 20px;
@@ -115,17 +115,17 @@ form {
   font-size: 30px;
 }
 
-/* line 47, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 .prompt {
   margin-top: 10%;
 }
 
-/* line 50, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 .fourPhotos {
   text-align: center;
 }
 
-/* line 53, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 .textAnswer, .continue, .start, .about {
   display: block;
   margin: 20px auto 20px auto;
@@ -135,13 +135,13 @@ form {
   font-size: 30px;
 }
 
-/* line 61, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 .continue {
   position: relative;
   margin-top: 30px;
 }
 
-/* line 66, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 input[type="image"] {
   width: 180px;
   height: 180px;
@@ -149,14 +149,14 @@ input[type="image"] {
   border-radius: 2px;
 }
 
-/* line 72, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 .start, .about {
   display: inline-block;
   position: relative;
   left: 50%;
 }
 
-/* line 75, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 #title {
   text-align: center;
 }
