@@ -62,7 +62,7 @@ form {
 .continue {
     @extend .textAnswer;
     position: relative;
-    margin-top: 30px;
+    bottom: 0px;
 }
 input[type="image"]{
     width: 180px;
