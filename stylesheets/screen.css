@@ -4,8 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* line 5, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
-h1,
-#title, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -74,7 +73,7 @@ body {
 }
 
 /* line 16, ../sass/screen.scss */
-h1, #title {
+h1 {
   color: #a5e8c8;
   font-family: fantasy;
   font-size: 100px;
@@ -149,14 +148,13 @@ input[type="image"] {
   border-radius: 2px;
 }
 
-/* line 73, ../sass/screen.scss */
-.start, .about {
-  display: inline-block;
-  position: relative;
-  left: 50%;
+/* line 74, ../sass/screen.scss */
+#homepage {
+  text-align: center;
+  top: 14em;
 }
 
-/* line 80, ../sass/screen.scss */
-#title {
-  text-align: center;
+/* line 79, ../sass/screen.scss */
+.start, .about {
+  display: inline;
 }

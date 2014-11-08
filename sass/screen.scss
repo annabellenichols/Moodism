@@ -70,14 +70,14 @@ input[type="image"]{
     padding: 2px;
     border-radius: 2px;
 }
-.start, .about {
-    @extend .textAnswer;
-    display: inline-block;
-    position: relative;
-    left: 50%;
+
+#homepage {
+    text-align: center;
+    top: 14em;
 }
 
-#title {
-    @extend h1;
-    text-align: center;
+.start, .about {
+    @extend .textAnswer;
+    display: inline;
 }
+
