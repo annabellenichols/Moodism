@@ -68,4 +68,11 @@ input[type="image"]{
 .start, .about {
     @extend .textAnswer;
     display: inline-block;
+    position: relative;
+    left: 50%;
+}
+
+#title {
+    @extend h1;
+    text-align: center;
 }
