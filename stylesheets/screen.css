@@ -120,6 +120,11 @@ form {
 }
 
 /* line 50, ../sass/screen.scss */
+.fourPhotos {
+  text-align: center;
+}
+
+/* line 53, ../sass/screen.scss */
 .textAnswer, .continue, .start, .about {
   display: block;
   margin: 20px auto 20px auto;
@@ -129,30 +134,21 @@ form {
   font-size: 30px;
 }
 
-/* line 58, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 .continue {
   position: relative;
   margin-top: 30px;
 }
 
-/* line 63, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 input[type="image"] {
-  padding: 5px;
   width: 180px;
   height: 180px;
-}
-
-/* line 68, ../sass/screen.scss */
-.start, .about {
-  display: inline-block;
+  padding: 2px;
+  border-radius: 2px;
 }
 
 /* line 72, ../sass/screen.scss */
-#color1 {
-  display: inline;
-}
-
-/* line 75, ../sass/screen.scss */
-#color3 {
-  display: inline;
+.start, .about {
+  display: inline-block;
 }
