@@ -120,7 +120,7 @@ form {
 }
 
 /* line 50, ../sass/screen.scss */
-.textAnswer, .continue {
+.textAnswer, .continue, .start, .about {
   display: block;
   margin: 20px auto 20px auto;
   width: 200px;
@@ -140,4 +140,9 @@ input[type="image"] {
   padding: 5px;
   width: 180px;
   height: 180px;
+}
+
+/* line 68, ../sass/screen.scss */
+.start, .about {
+  display: inline-block;
 }

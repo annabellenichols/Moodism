@@ -65,8 +65,7 @@ input[type="image"]{
     width: 180px;
     height: 180px;
 }
-
-start, about {
+.start, .about {
     @extend .textAnswer;
     display: inline-block;
 }
