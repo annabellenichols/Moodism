@@ -146,3 +146,13 @@ input[type="image"] {
 .start, .about {
   display: inline-block;
 }
+
+/* line 72, ../sass/screen.scss */
+#color1 {
+  display: inline;
+}
+
+/* line 75, ../sass/screen.scss */
+#color3 {
+  display: inline;
+}
