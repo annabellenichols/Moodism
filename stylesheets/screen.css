@@ -125,6 +125,11 @@ form {
 }
 
 /* line 54, ../sass/screen.scss */
+.twoPhotos {
+  text-align: center;
+}
+
+/* line 57, ../sass/screen.scss */
 .textAnswer, .continue, .start, .about {
   display: block;
   margin: 20px auto 20px auto;
@@ -135,7 +140,7 @@ form {
   border-radius: 5px;
 }
 
-/* line 63, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 .continue {
   position: relative;
   border: 0px;
@@ -143,7 +148,7 @@ form {
   bottom: 0px;
 }
 
-/* line 70, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 input[type="image"] {
   width: 180px;
   height: 180px;
@@ -151,13 +156,13 @@ input[type="image"] {
   border-radius: 5px;
 }
 
-/* line 77, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 #homepage {
   text-align: center;
   top: 14em;
 }
 
-/* line 82, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 .start, .about {
   display: inline;
 }

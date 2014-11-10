@@ -51,6 +51,9 @@ form {
 .fourPhotos{
     text-align: center;
 }
+.twoPhotos{
+    text-align: center;
+}
 .textAnswer {
     display: block;
     margin: 20px auto 20px auto;
@@ -73,7 +76,6 @@ input[type="image"]{
     padding: 2px;
     border-radius: 5px;
 }
-
 #homepage {
     text-align: center;
     top: 14em;
@@ -83,4 +85,3 @@ input[type="image"]{
     @extend .textAnswer;
     display: inline;
 }
-
