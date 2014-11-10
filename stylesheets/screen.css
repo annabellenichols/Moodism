@@ -138,11 +138,12 @@ form {
 /* line 63, ../sass/screen.scss */
 .continue {
   position: relative;
+  border: 0px;
   border-radius: 5px;
   bottom: 0px;
 }
 
-/* line 69, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 input[type="image"] {
   width: 180px;
   height: 180px;
@@ -150,13 +151,13 @@ input[type="image"] {
   border-radius: 5px;
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 #homepage {
   text-align: center;
   top: 14em;
 }
 
-/* line 81, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 .start, .about {
   display: inline;
 }
