@@ -9,9 +9,8 @@ $background-color: #42444d;
 $main-green: #a5e8c8;
 $font-family: fantasy;
 
-
 body{
-	background-color: $background-color;
+	background-image: url("../images/background.png");
 }
 h1 {
 	color: $main-green;
@@ -105,13 +104,23 @@ button {
     display: none;
 }
 
-input[type="image"]{
+img{
     width: 180px;
     height: 180px;
-    padding: 2px;
-    border-radius: 2px;
+    margin: 2px;
+    border: 5px solid #000000;
+    border-radius: 5px;
 }
-
+label > input{ /* HIDE RADIO */
+display:none;
+}
+label > input + img{ /* IMAGE STYLES */
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
+    border: 2px solid $main-green;
+}
 #homepage {
     text-align: center;
     top: 14em;
@@ -188,4 +197,6 @@ input[type="image"]{
 }
 
 .close:hover { background: $main-green; }
-
+.rightSide{
+    text-align: center;
+}
