@@ -4,15 +4,24 @@
 $(document).ready(function() {
     var answers = {};
 
-//    if($('input:radio:checked').length > 0){
+
+//    $("input:radio[name=answer]").on("click", function () {
+//    if ($("input:radio[name=answer]").is(":checked")) {
+//        $(this).css( "color", "red" );
+//        $( ".continue" ).show();
+//    }
+//    });
+
+//    if ($("input:radio[name=answer]").is(":checked")) {
 //        $(this).css( "color", "red" );
 //        $( ".continue" ).show();
 //    }
 
-//    $( ".textAnswer" ).click( function( event ) {
-//        $(this).css( "color", "red" );
-//        $( ".continue" ).show();
-//    });
+    $( ".textAnswer" ).click( function( event ) {
+        $(this).css( "color", "red" );
+        $( ".continue" ).show();
+    });[444444
+
 
     $( "form" ).submit(function( event ) {
         event.preventDefault();
