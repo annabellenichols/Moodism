@@ -10,7 +10,7 @@ $main-green: #a5e8c8;
 $font-family: fantasy;
 
 body{
-	background-color: $background-color;
+	background-image: url("../images/background.png");
 }
 h1 {
 	color: $main-green;
@@ -103,11 +103,12 @@ button {
     bottom: 0px;
 }
 
-input[type="image"]{
+img{
     width: 180px;
     height: 180px;
-    padding: 2px;
-    border-radius: 2px;
+    margin: 2px;
+    border: 5px solid #000000;
+    border-radius: 5px;
 }
 label > input{ /* HIDE RADIO */
 display:none;
@@ -195,4 +196,6 @@ label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
 }
 
 .close:hover { background: $main-green; }
-
+.rightSide{
+    text-align: center;
+}
