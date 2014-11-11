@@ -194,12 +194,11 @@ input[type="image"] {
 /* line 130, ../sass/screen.scss */
 .modalDialog {
   position: fixed;
-  font-family: Arial, Helvetica, sans-serif;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 99999;
   opacity: 0;
   -webkit-transition: opacity 400ms ease-in;
@@ -208,46 +207,50 @@ input[type="image"] {
   pointer-events: none;
 }
 
-/* line 146, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 .modalDialog:target {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 151, ../sass/screen.scss */
+/* line 150, ../sass/screen.scss */
 .modalDialog > div {
-  width: 400px;
+  width: 270px;
+  height: 270px;
   position: relative;
+  top: 75px;
+  border-radius: 50%;
   margin: 10% auto;
-  padding: 5px 20px 13px 20px;
-  border-radius: 10px;
-  background: #fff;
-  background: -moz-linear-gradient(#fff, #999);
-  background: -webkit-linear-gradient(#fff, #999);
-  background: -o-linear-gradient(#fff, #999);
+  background: #ffffcc;
+  padding: 50px 40px 0px 40px;
+  box-sizing: padding-box;
 }
 
-/* line 163, ../sass/screen.scss */
+/* line 162, ../sass/screen.scss */
+.modalDialog > div > * {
+  color: #343434;
+}
+
+/* line 166, ../sass/screen.scss */
 .close {
-  background: #606061;
+  background: #ffffcc;
   color: #FFFFFF;
-  line-height: 25px;
+  line-height: 35px;
   position: absolute;
   right: -12px;
   text-align: center;
-  top: -10px;
-  width: 24px;
+  top: -1px;
+  right: 30px;
+  width: 35px;
   text-decoration: none;
   font-weight: bold;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  border-radius: 12px;
+  border-radius: 50%;
   -moz-box-shadow: 1px 1px 3px #000;
   -webkit-box-shadow: 1px 1px 3px #000;
   box-shadow: 1px 1px 3px #000;
 }
 
-/* line 182, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 .close:hover {
-  background: #00d9ff;
+  background: #a5e8c8;
 }
