@@ -2,7 +2,11 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+<<<<<<< HEAD
 /* line 5, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> origin/master
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +28,77 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+<<<<<<< HEAD
 /* line 22, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> origin/master
 html {
   line-height: 1;
 }
 
+<<<<<<< HEAD
 /* line 24, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> origin/master
 ol, ul {
   list-style: none;
 }
 
+<<<<<<< HEAD
 /* line 26, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> origin/master
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
+<<<<<<< HEAD
 /* line 28, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> origin/master
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
+<<<<<<< HEAD
 /* line 30, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
 /* line 103, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> origin/master
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
+<<<<<<< HEAD
 /* line 32, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> origin/master
 a img {
   border: none;
 }
 
+<<<<<<< HEAD
 /* line 116, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> origin/master
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -77,27 +113,28 @@ h1 {
   color: #a5e8c8;
   font-family: "Bad Script", cursive;
   font-size: 100px;
+  font-family: "Bad Script", cursive;
   font-style: italic;
   padding-top: 20px;
 }
 
-/* line 25, ../sass/screen.scss */
+/* line 26, ../sass/screen.scss */
 h2 {
   text-align: center;
   color: #a5e8c8;
-  font-family: fantasy;
+  font-family: "Bad Script", cursive;
   font-size: 35px;
 }
 
-/* line 33, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 p {
   text-align: center;
   color: #a5e8c8;
-  font-family: fantasy;
+  font-family: "Bad Script", cursive;
   font-size: 20px;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 form {
   margin-top: 3%;
 }
@@ -118,7 +155,7 @@ button {
     box-sizing: border-box;
 }
 */
-/* line 63, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
 .side {
   display: block;
   margin-bottom: 20px;
@@ -132,23 +169,23 @@ button {
   border: 2px solid #000000;
 }
 
-/* line 77, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 .prompt {
   margin-top: 10%;
 }
 
-/* line 81, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 .fourPhotos {
   text-align: center;
 }
 
-/* line 85, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 .textAnswer, .continue, .start, .about {
   display: block;
   margin: 20px auto 20px auto;
   width: 200px;
   height: 60px;
-  font-family: fantasy;
+  font-family: "Bad Script", cursive;
   font-size: 30px;
   color: #a5e8c8;
   background-color: #7c8093;
@@ -159,14 +196,14 @@ button {
   border-radius: 7%;
 }
 
-/* line 101, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 .continue {
   position: relative;
   bottom: 0px;
   display: none;
 }
 
-/* line 108, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 img {
   width: 180px;
   height: 180px;
@@ -175,26 +212,26 @@ img {
   border-radius: 5px;
 }
 
-/* line 115, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 label > input {
   /* HIDE RADIO */
   display: none;
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 label > input + img {
   /* IMAGE STYLES */
   cursor: pointer;
   border: 2px solid transparent;
 }
 
-/* line 122, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 label > input:checked + img {
   /* (CHECKED) IMAGE STYLES */
   border: 7px solid #a5e8c8;
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 #homepage {
   text-align: center;
   top: 14em;
@@ -208,14 +245,14 @@ label > input:checked + img {
     margin-right: 5px;
 }
 */
-/* line 139, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 .start, .about {
   display: inline-block;
   text-decoration: none;
   line-height: 55px;
 }
 
-/* line 146, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 .modalDialog {
   position: fixed;
   top: 0;
@@ -231,13 +268,13 @@ label > input:checked + img {
   pointer-events: none;
 }
 
-/* line 161, ../sass/screen.scss */
+/* line 162, ../sass/screen.scss */
 .modalDialog:target {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 166, ../sass/screen.scss */
+/* line 167, ../sass/screen.scss */
 .modalDialog > div {
   width: 270px;
   height: 270px;
@@ -250,12 +287,12 @@ label > input:checked + img {
   box-sizing: padding-box;
 }
 
-/* line 178, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 .modalDialog > div > * {
   color: #343434;
 }
 
-/* line 182, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 .close {
   background: #ffffcc;
   color: #FFFFFF;
@@ -274,12 +311,12 @@ label > input:checked + img {
   box-shadow: 1px 1px 3px #000;
 }
 
-/* line 200, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 .close:hover {
   background: #a5e8c8;
 }
 
-/* line 201, ../sass/screen.scss */
+/* line 202, ../sass/screen.scss */
 .rightSide {
   text-align: center;
 }
