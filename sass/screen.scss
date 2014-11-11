@@ -12,6 +12,7 @@ $font-family: fantasy;
 body{
 	background-image: url("../images/background.png");
 }
+
 h1 {
 	color: $main-green;
 	font-family: $font-family;
@@ -119,7 +120,7 @@ label > input + img{ /* IMAGE STYLES */
     border: 2px solid transparent;
 }
 label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
-    border: 2px solid $main-green;
+    border: 7px solid $main-green;
 }
 #homepage {
     text-align: center;

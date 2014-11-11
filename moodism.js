@@ -15,5 +15,10 @@ $(document).ready(function() {
 //    });
 
     $( "form" ).submit(function( event ) {
+        event.preventDefault();
+        alert($('input[name=answer]').val());
+        answers.push($('input[name=answer]').val());
+
+
     });
 });
