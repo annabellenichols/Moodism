@@ -110,7 +110,16 @@ input[type="image"]{
     padding: 2px;
     border-radius: 2px;
 }
-
+label > input{ /* HIDE RADIO */
+display:none;
+}
+label > input + img{ /* IMAGE STYLES */
+    cursor:pointer;
+    border:2px solid transparent;
+}
+label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
+    border:2px solid #8080cc;
+}
 #homepage {
     text-align: center;
     top: 14em;
