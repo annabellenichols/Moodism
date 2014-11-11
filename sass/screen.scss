@@ -103,6 +103,7 @@ button {
     position: relative;
     bottom: 0px;
 }
+
 input[type="image"]{
     width: 180px;
     height: 180px;
@@ -115,14 +116,16 @@ input[type="image"]{
     top: 14em;
 }
 
+/*
 .start {
     @extend .textAnswer;
     display: inline-block;
     margin-left: 5px;
     margin-right: 5px;
 }
+*/
 
-.about {
+.start, .about, .continue {
     @extend .textAnswer;
     display: inline-block;
     text-decoration: none;
