@@ -67,7 +67,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 12, ../sass/screen.scss */
+/* line 13, ../sass/screen.scss */
 body {
   background-image: url("../images/background.png");
 }
@@ -75,7 +75,7 @@ body {
 /* line 16, ../sass/screen.scss */
 h1 {
   color: #a5e8c8;
-  font-family: fantasy;
+  font-family: "Bad Script", cursive;
   font-size: 100px;
   font-style: italic;
   padding-top: 20px;

@@ -30,10 +30,18 @@
             <h2>Pick a media type:</h2>
 
             <form class="options" id="media">
-                <input type="radio" name="answer" class="textAnswer">Video
-                <input type="radio" name="answer" class="textAnswer">Poem
-                <input type="radio" name="answer" class="textAnswer">Photo
-                <input type="submit" class="continue" id="mediaContinue">Continue</button>
+                <label>
+                    <input type="radio" name="answer" value="photo" />
+                    <button type="button" class="textAnswer">Photo</button>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="video" />
+                    <button type="button" class="textAnswer">Video</button>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="poem" />
+                    <button type="button" class="textAnswer">Poem</button>
+                </label>
             </form>
         </div>
 
