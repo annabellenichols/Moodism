@@ -122,25 +122,27 @@ button {
 .side {
   display: block;
   margin-bottom: 20px;
-  color: blue;
+  color: #000000;
   border-radius: 50%;
   border: 0px;
   width: 40px;
   height: 40px;
   font-size: 30px;
+  background-color: #6fafb5;
+  border: 2px solid #000000;
 }
 
-/* line 75, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 .prompt {
   margin-top: 10%;
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 .fourPhotos {
   text-align: center;
 }
 
-/* line 83, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 .textAnswer, .continue, .start, .about {
   display: block;
   margin: 20px auto 20px auto;
@@ -157,13 +159,13 @@ button {
   border-radius: 7%;
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .continue {
   position: relative;
   bottom: 0px;
 }
 
-/* line 104, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 input[type="image"] {
   width: 180px;
   height: 180px;
@@ -171,27 +173,27 @@ input[type="image"] {
   border-radius: 2px;
 }
 
-/* line 111, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 #homepage {
   text-align: center;
   top: 14em;
 }
 
-/* line 116, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 .start {
   display: inline-block;
   margin-left: 5px;
   margin-right: 5px;
 }
 
-/* line 123, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .about {
   display: inline-block;
   text-decoration: none;
   line-height: 55px;
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 .modalDialog {
   position: fixed;
   top: 0;
@@ -207,13 +209,13 @@ input[type="image"] {
   pointer-events: none;
 }
 
-/* line 145, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 .modalDialog:target {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 150, ../sass/screen.scss */
+/* line 152, ../sass/screen.scss */
 .modalDialog > div {
   width: 270px;
   height: 270px;
@@ -226,12 +228,12 @@ input[type="image"] {
   box-sizing: padding-box;
 }
 
-/* line 162, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 .modalDialog > div > * {
   color: #343434;
 }
 
-/* line 166, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 .close {
   background: #ffffcc;
   color: #FFFFFF;
@@ -250,7 +252,7 @@ input[type="image"] {
   box-shadow: 1px 1px 3px #000;
 }
 
-/* line 184, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 .close:hover {
   background: #a5e8c8;
 }
