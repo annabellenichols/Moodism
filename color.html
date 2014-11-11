@@ -27,10 +27,22 @@
             <h2>Pick a color:</h2>
 
             <form id="colors" class="fourPhotos">
-                <input type="image" src="images/red.jpg" class="color" id="color1" />
-                <input type="image" src="images/blue.jpg" class="color" id="color2"/><br>
-                <input type="image" src="images/yellow.jpg" class="color" id="color3"/>
-                <input type="image" src="images/green.png" class="color" id="color4"/>
+                <label>
+                    <input type="radio" name="color" value="red" />
+                    <img width="180px" height="180px" src="images/red.jpg"/>
+                </label>
+                <label>
+                    <input type="radio" name="color" value="blue"/>
+                    <img width="180px" height="180px" src="images/blue.jpg"/>
+                </label>
+                <label>
+                    <input type="radio" name="color" value="yellow" />
+                    <img width="180px" height="180px" src="images/yellow.jpg"/>
+                </label>
+                <label>
+                    <input type="radio" name="color" value="green"/>
+                    <img width="180px" height="180px" src="images/green.png"/>
+                </label>
                 <button type="submit" class="continue" id="colorContinue">Continue</button>
             </form>
         </div>

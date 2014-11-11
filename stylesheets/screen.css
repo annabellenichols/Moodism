@@ -189,7 +189,7 @@ label > input + img {
 /* line 120, ../sass/screen.scss */
 label > input:checked + img {
   /* (CHECKED) IMAGE STYLES */
-  border: 2px solid #8080cc;
+  border: 2px solid #a5e8c8;
 }
 
 /* line 123, ../sass/screen.scss */
