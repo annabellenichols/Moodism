@@ -188,7 +188,7 @@ input[type="image"] {
 }
 */
 /* line 128, ../sass/screen.scss */
-.start, .about, .continue {
+.start, .about {
   display: inline-block;
   text-decoration: none;
   line-height: 55px;
