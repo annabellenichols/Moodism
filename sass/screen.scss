@@ -43,6 +43,7 @@ form {
 }
 
 
+/*
 button {
     align-items: flex-start;
     text-align: center;
@@ -57,7 +58,7 @@ button {
     background-color: buttonface;
     box-sizing: border-box;
 }
-
+*/
 
 .side {
     display: block;
@@ -74,9 +75,11 @@ button {
 .prompt {
     margin-top: 10%;
 }
+
 .fourPhotos{
     text-align: center;
 }
+
 .textAnswer {
     display: block;
     margin: 20px auto 20px auto;
@@ -84,7 +87,15 @@ button {
     height: 60px;
     font-family: fantasy;
     font-size: 30px;
+    color: $main-green;
+    background-color: #7c8093;
+    border: medium solid #ffffff;
+    box-sizing: border-box;
+    -webkit-border-radius: 7%;
+	-moz-border-radius: 7%;
+	border-radius: 7%;
 }
+
 .continue {
     @extend .textAnswer;
     position: relative;
@@ -102,7 +113,7 @@ input[type="image"]{
     top: 14em;
 }
 
-.start, .about {
+.start {
     @extend .textAnswer;
     display: inline-block;
     margin-left: 5px;
@@ -110,10 +121,10 @@ input[type="image"]{
 }
 
 .about {
-    @extend button;
-    color: black;
+    @extend .textAnswer;
+    display: inline-block;
     text-decoration: none;
-    line-height: 60px;
+    line-height: 55px;
 }
 
 .modalDialog {

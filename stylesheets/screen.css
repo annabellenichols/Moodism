@@ -102,23 +102,23 @@ form {
   margin-top: 3%;
 }
 
-/* line 46, ../sass/screen.scss */
-button, .about {
-  align-items: flex-start;
-  text-align: center;
-  cursor: default;
-  color: buttontext;
-  border: 2px outset buttonface;
-  border-image-source: initial;
-  border-image-slice: initial;
-  border-image-width: initial;
-  border-image-outset: initial;
-  border-image-repeat: initial;
-  background-color: buttonface;
-  box-sizing: border-box;
+/*
+button {
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    border: 2px outset buttonface;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    background-color: buttonface;
+    box-sizing: border-box;
 }
-
-/* line 62, ../sass/screen.scss */
+*/
+/* line 63, ../sass/screen.scss */
 .side {
   display: block;
   margin-bottom: 20px;
@@ -130,17 +130,17 @@ button, .about {
   font-size: 30px;
 }
 
-/* line 74, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 .prompt {
   margin-top: 10%;
 }
 
-/* line 77, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 .fourPhotos {
   text-align: center;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 .textAnswer, .continue, .start, .about {
   display: block;
   margin: 20px auto 20px auto;
@@ -148,15 +148,22 @@ button, .about {
   height: 60px;
   font-family: fantasy;
   font-size: 30px;
+  color: #a5e8c8;
+  background-color: #7c8093;
+  border: medium solid #ffffff;
+  box-sizing: border-box;
+  -webkit-border-radius: 7%;
+  -moz-border-radius: 7%;
+  border-radius: 7%;
 }
 
-/* line 88, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 .continue {
   position: relative;
   bottom: 0px;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 input[type="image"] {
   width: 180px;
   height: 180px;
@@ -164,27 +171,27 @@ input[type="image"] {
   border-radius: 2px;
 }
 
-/* line 100, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 #homepage {
   text-align: center;
   top: 14em;
 }
 
-/* line 105, ../sass/screen.scss */
-.start, .about {
+/* line 116, ../sass/screen.scss */
+.start {
   display: inline-block;
   margin-left: 5px;
   margin-right: 5px;
 }
 
-/* line 112, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 .about {
-  color: black;
+  display: inline-block;
   text-decoration: none;
-  line-height: 60px;
+  line-height: 55px;
 }
 
-/* line 119, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .modalDialog {
   position: fixed;
   font-family: Arial, Helvetica, sans-serif;
@@ -201,13 +208,13 @@ input[type="image"] {
   pointer-events: none;
 }
 
-/* line 135, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 .modalDialog:target {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 140, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 .modalDialog > div {
   width: 400px;
   position: relative;
@@ -220,7 +227,7 @@ input[type="image"] {
   background: -o-linear-gradient(#fff, #999);
 }
 
-/* line 152, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 .close {
   background: #606061;
   color: #FFFFFF;
@@ -240,7 +247,7 @@ input[type="image"] {
   box-shadow: 1px 1px 3px #000;
 }
 
-/* line 171, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .close:hover {
   background: #00d9ff;
 }
