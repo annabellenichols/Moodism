@@ -102,6 +102,7 @@ button {
     @extend .textAnswer;
     position: relative;
     bottom: 0px;
+    display: none;
 }
 
 input[type="image"]{

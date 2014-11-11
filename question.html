@@ -5,6 +5,8 @@
     <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
     <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <link href="grid.css" rel="stylesheet" type="text/css" />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="moodism.js"></script>
 </head>
 
 <body>
@@ -28,10 +30,10 @@
             <h2>Pick a media type:</h2>
 
             <form class="options" id="media">
-                <button type="button" class="textAnswer">Video</button>
-                <button type="button" class="textAnswer">Poem</button>
-                <button type="button" class="textAnswer">Photo</button>
-                <button type="submit" class="continue" id="mediaContinue">Continue</button>
+                <input type="radio" class="textAnswer">Video
+                <input type="radio" class="textAnswer">Poem
+                <input type="radio" class="textAnswer">Photo
+                <input type="submit" class="continue" id="mediaContinue">Continue</button>
             </form>
         </div>
 

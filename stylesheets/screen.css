@@ -163,9 +163,10 @@ button {
 .continue {
   position: relative;
   bottom: 0px;
+  display: none;
 }
 
-/* line 107, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 input[type="image"] {
   width: 180px;
   height: 180px;
@@ -173,7 +174,7 @@ input[type="image"] {
   border-radius: 2px;
 }
 
-/* line 114, ../sass/screen.scss */
+/* line 115, ../sass/screen.scss */
 #homepage {
   text-align: center;
   top: 14em;
@@ -187,14 +188,14 @@ input[type="image"] {
     margin-right: 5px;
 }
 */
-/* line 128, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 .start, .about {
   display: inline-block;
   text-decoration: none;
   line-height: 55px;
 }
 
-/* line 135, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 .modalDialog {
   position: fixed;
   top: 0;
@@ -210,13 +211,13 @@ input[type="image"] {
   pointer-events: none;
 }
 
-/* line 150, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 .modalDialog:target {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 155, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .modalDialog > div {
   width: 270px;
   height: 270px;
@@ -229,12 +230,12 @@ input[type="image"] {
   box-sizing: padding-box;
 }
 
-/* line 167, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 .modalDialog > div > * {
   color: #343434;
 }
 
-/* line 171, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 .close {
   background: #ffffcc;
   color: #FFFFFF;
@@ -253,7 +254,7 @@ input[type="image"] {
   box-shadow: 1px 1px 3px #000;
 }
 
-/* line 189, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 .close:hover {
   background: #a5e8c8;
 }
