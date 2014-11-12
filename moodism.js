@@ -109,7 +109,7 @@ $(document).ready(function() {
         // get question's container's width, height, and distance from left side of broser window
         var containerHeight = $questionContainer.height();
         var containerWidth = $questionContainer.width() - 20; // -20px due to padding and margins
-        var leftDistance = $questionContainer.offset().left + 10; // 10px due to having removed 20 before
+        var leftDistance = $questionContainer.offset().left - 65; // 10px due to having removed 20 before
 
         // create temp container and hide it
         var $tempContainer = $('<div class="grid_8" id="tempContainer">').css(
@@ -119,18 +119,8 @@ $(document).ready(function() {
         );
         $('#main').append($tempContainer);
 
-        // find if new question comes after the current one, in order to slide in the correct direction
-        var slideTop, animateTop;
-        if (questions.indexOf(newQuestion) > questions.indexOf(getQuestion())) {
-            slideTop = '100%';    // position new question on top
-            animateTop = '-100%';
-        } else {  // new question comes before the current one
-            slideTop = '-100%';   // position new question on the bottom
-            animateTop = '100%';
-        }
-
         // add temp container before or after main container
-        $tempContainer.css({position: 'relative', top: slideTop, left: leftDistance, display: 'block', opacity: 0});
+        $tempContainer.css({position: 'relative', top: '100%', left: leftDistance, display: 'block', opacity: 0});
 
         // change question's container's position to relative in order for the animation to work
         $questionContainer.css({position: 'relative'});
