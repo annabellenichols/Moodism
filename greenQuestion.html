@@ -25,10 +25,15 @@
     <!-- Media Type -->
         <div class="grid_8">
             <h2>Where would you rather be?</h2>
-
             <form id="greenPlaces" class="twoPhotos">
-                <input type="image" class="twoOptions" src="images/picnic.jpg"/>
-                <input type="image" class="twoOptions" src="images/jogging.jpg"width="100px" height="80px"/>
+                <label>
+                    <input type="radio" name="first">
+                    <img class="twoOptions" src="images/picnic.jpg">
+                </label>
+                <label>
+                    <input type="radio" name="second">
+                    <img class="twoOptions" src="images/jogging.jpg">
+                </label>
                 <button type="submit" class="continue" id="dogsContinue">Continue</button>
             </form>
         </div>

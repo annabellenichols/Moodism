@@ -63,37 +63,11 @@ form {
 .prompt {
     margin-top: 10%;
 }
-.textAnswer {
-    display: block;
-    margin: 20px auto 20px auto;
-    width: 200px;
-    height: 60px;
-    font-family: $font-family;
-    font-size: 30px;
-    color: $main-green;
-    background-color: #7c8093;
-    border: medium solid $cream;
-    box-sizing: border-box;
-    -webkit-border-radius: 7%;
-	-moz-border-radius: 7%;
-	border-radius: 7%;
-}
-
 .continue {
     @extend .textAnswer;
     position: relative;
     bottom: 0px;
     display: none;
-}
-label > input{ /* HIDE RADIO */
-    display:none;
-}
-label > input + img{ /* IMAGE STYLES */
-    cursor: pointer;
-    border: 2px solid transparent;
-}
-label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
-    border: 2px solid $cream;
 }
 
 /******** Home Page ********/
@@ -159,11 +133,33 @@ label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
 .close:hover {
     background: $main-green;
 }
-
+/******** For Text-answer questions ********/
+.textAnswer {
+    display: block;
+    margin: 20px auto 20px auto;
+    width: 200px;
+    height: 60px;
+    font-family: $font-family;
+    font-size: 30px;
+    color: $main-green;
+    background-color: #7c8093;
+    border: medium solid $cream;
+    box-sizing: border-box;
+    -webkit-border-radius: 7%;
+    -moz-border-radius: 7%;
+    border-radius: 7%;
+}
 /******** For Questions with Images ********/
-img{
+label > input{ /* HIDE RADIO */
+    display:none;
+}
+img{ /* (UNCHECKED) IMAGE STYLES */
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
     border: 2px solid $cream;
-    border-radius: 5px;
 }
 /* Styles the photos as a block*/
 .fourPhotos{
