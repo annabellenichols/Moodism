@@ -5,6 +5,7 @@
     <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
     <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <link href="grid.css" rel="stylesheet" type="text/css" />
+    <link href="temp.css" rel="stylesheet" type="text/css" />
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="moodism.js"></script>
 </head>
@@ -26,35 +27,35 @@
         </div>
 
     <!-- Media Type -->
-        <div class="grid_8">
-            <h2>Pick a media type:</h2>
+        <div class="grid_8" id="questions_container">
+            <div id="media">
+                <h2>Pick a media type:</h2>
 
-            <form class="options" id="media">
-                <label>
-                    <input type="radio" name="answer" value="photo" />
-                    <button type="button" class="textAnswer">Photo</button>
-                </label>
-                <label>
-                    <input type="radio" name="answer" value="video" />
-                    <button type="button" class="textAnswer">Video</button>
-                </label>
-                <label>
-                    <input type="radio" name="answer" value="poem" />
-                    <button type="button" class="textAnswer">Poem</button>
-                </label>
-                <button type="submit" class="continue">Continue</button>
-            </form>
+                <form class="options" id="media">
+                    <label>
+                        <input type="radio" name="answer" value="photo" />
+                        <button type="button" class="textAnswer">Photo</button>
+                    </label>
+                    <label>
+                        <input type="radio" name="answer" value="video" />
+                        <button type="button" class="textAnswer">Video</button>
+                    </label>
+                    <label>
+                        <input type="radio" name="answer" value="poem" />
+                        <button type="button" class="textAnswer">Poem</button>
+                    </label>
+                    <button type="submit" class="continue">Continue</button>
+                </form>
+            </div>
         </div>
 
         <div class="grid_2">
             <!-- Right hand navigation buttons -->
-            <div class="rightButtons">
-                <button type="button" class="side"></button>
-                <button type="button" class="side"></button>
-                <button type="button" class="side"></button>
-                <button type="button" class="side"></button>
-                <button type="button" class="side"></button>
-            </div>
+            <button type="button" class="side"></button>
+            <button type="button" class="side"></button>
+            <button type="button" class="side"></button>
+            <button type="button" class="side"></button>
+            <button type="button" class="side"></button>
         </div>
 
     </div>

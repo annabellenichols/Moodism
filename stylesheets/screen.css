@@ -67,12 +67,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 14, ../sass/screen.scss */
+/* line 13, ../sass/screen.scss */
 body {
   background-image: url("../images/background.png");
 }
 
-/* line 18, ../sass/screen.scss */
+/* line 17, ../sass/screen.scss */
 h1 {
   color: #a5e8c8;
   font-family: "Bad Script", cursive;
@@ -80,6 +80,7 @@ h1 {
   font-family: "Bad Script", cursive;
   font-style: italic;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /* line 28, ../sass/screen.scss */
@@ -133,22 +134,17 @@ button {
   border: 2px solid #000000;
 }
 
-/* line 78, ../sass/screen.scss */
-.rightButtons {
-  float: right;
-}
-
-/* line 81, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 .prompt {
   margin-top: 10%;
 }
 
-/* line 85, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 .fourPhotos {
   text-align: center;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 .textAnswer, .continue, .start, .about {
   display: block;
   margin: 20px auto 20px auto;
@@ -165,14 +161,14 @@ button {
   border-radius: 7%;
 }
 
-/* line 105, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 .continue {
   position: relative;
   bottom: 0px;
   display: none;
 }
 
-/* line 112, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 img {
   width: 180px;
   height: 180px;
@@ -187,20 +183,20 @@ label > input {
   display: none;
 }
 
-/* line 122, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 label > input + img {
   /* IMAGE STYLES */
   cursor: pointer;
   border: 2px solid transparent;
 }
 
-/* line 126, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 label > input:checked + img {
   /* (CHECKED) IMAGE STYLES */
   border: 7px solid #a5e8c8;
 }
 
-/* line 129, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 #homepage {
   text-align: center;
   top: 14em;
@@ -214,14 +210,14 @@ label > input:checked + img {
     margin-right: 5px;
 }
 */
-/* line 143, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 .start, .about {
   display: inline-block;
   text-decoration: none;
   line-height: 55px;
 }
 
-/* line 150, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 .modalDialog {
   position: fixed;
   top: 0;
@@ -237,13 +233,13 @@ label > input:checked + img {
   pointer-events: none;
 }
 
-/* line 165, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 .modalDialog:target {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 170, ../sass/screen.scss */
+/* line 173, ../sass/screen.scss */
 .modalDialog > div {
   width: 270px;
   height: 270px;
@@ -256,12 +252,12 @@ label > input:checked + img {
   box-sizing: padding-box;
 }
 
-/* line 182, ../sass/screen.scss */
+/* line 185, ../sass/screen.scss */
 .modalDialog > div > * {
   color: #343434;
 }
 
-/* line 186, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 .close {
   background: #ffffcc;
   color: #FFFFFF;
@@ -280,12 +276,12 @@ label > input:checked + img {
   box-shadow: 1px 1px 3px #000;
 }
 
-/* line 204, ../sass/screen.scss */
+/* line 207, ../sass/screen.scss */
 .close:hover {
   background: #a5e8c8;
 }
 
-/* line 205, ../sass/screen.scss */
+/* line 208, ../sass/screen.scss */
 .rightSide {
   text-align: center;
 }

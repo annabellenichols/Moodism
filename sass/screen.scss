@@ -5,7 +5,6 @@
 
 @import "compass/reset";
 
-tmp{}
 
 $background-color: #42444d;
 $main-green: #a5e8c8;
@@ -22,6 +21,7 @@ h1 {
     font-family: $font-family;
 	font-style: italic;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 
@@ -75,9 +75,8 @@ button {
     background-color: #6fafb5;
     border: 2px solid #000000;
 }
-.rightButtons{
-    float: right;
-}
+
+
 .prompt {
     margin-top: 10%;
 }
@@ -116,16 +115,20 @@ img{
     border: 5px solid #000000;
     border-radius: 5px;
 }
+
 label > input{ /* HIDE RADIO */
 display:none;
 }
+
 label > input + img{ /* IMAGE STYLES */
     cursor: pointer;
     border: 2px solid transparent;
 }
+
 label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
     border: 7px solid $main-green;
 }
+
 #homepage {
     text-align: center;
     top: 14em;
