@@ -7,6 +7,7 @@ $background-color: #42444d;
 $main-green: #a5e8c8;
 $other-blue: #6FAFB5;
 $cream: #f5f5f5;
+$light-grey: #7c8093;
 $font-family: 'Bad Script', cursive;
 
 /******** For ALL pages!!! ********/
@@ -49,25 +50,14 @@ form {
     width: 40px;
     height: 40px;
     font-size: 30px;
-    background-color: $other-blue;
-    border: 2px solid $cream;
+    background-color: $light-grey;
+    border: 1px solid $cream;
 }
 .leftButtons{
     float:left;
 }
 .rightButtons{
     float: right;
-}
-
-/******** Question Content ********/
-.prompt {
-    margin-top: 10%;
-}
-.continue {
-    @extend .textAnswer;
-    position: relative;
-    bottom: 0px;
-    display: none;
 }
 
 /******** Home Page ********/
@@ -143,7 +133,7 @@ form {
     font-size: 30px;
     color: $main-green;
     background-color: #7c8093;
-    border: medium solid $cream;
+    border: 1px solid $cream;
     box-sizing: border-box;
     -webkit-border-radius: 7%;
     -moz-border-radius: 7%;
@@ -179,4 +169,13 @@ label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
     margin: 3px;
     width: 275px;
     height: 275px;
+}
+/******** Question Content ********/
+.prompt {
+    margin-top: 10%;
+}
+.continue {
+    @extend .textAnswer;
+    position: relative;
+    display: none;
 }

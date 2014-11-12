@@ -66,13 +66,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /******** Variables *******/
 /******** For ALL pages!!! ********/
-/* line 13, ../sass/screen.scss */
+/* line 14, ../sass/screen.scss */
 body {
   background-image: url("../images/background.png");
 }
 
 /******** Fonts ********/
-/* line 18, ../sass/screen.scss */
+/* line 19, ../sass/screen.scss */
 h1 {
   color: #a5e8c8;
   font-family: "Bad Script", cursive;
@@ -82,7 +82,7 @@ h1 {
   float: left;
 }
 
-/* line 26, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 h2 {
   text-align: center;
   color: #a5e8c8;
@@ -90,7 +90,7 @@ h2 {
   font-size: 35px;
 }
 
-/* line 32, ../sass/screen.scss */
+/* line 33, ../sass/screen.scss */
 p {
   text-align: center;
   color: #a5e8c8;
@@ -98,13 +98,13 @@ p {
   font-size: 20px;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 form {
   margin-top: 3%;
 }
 
 /******** Side Navigation ********/
-/* line 43, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 .side {
   display: block;
   margin-bottom: 20px;
@@ -114,48 +114,35 @@ form {
   width: 40px;
   height: 40px;
   font-size: 30px;
-  background-color: #6FAFB5;
-  border: 2px solid #f5f5f5;
+  background-color: #7c8093;
+  border: 1px solid #f5f5f5;
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 .leftButtons {
   float: left;
 }
 
-/* line 58, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 .rightButtons {
   float: right;
 }
 
-/******** Question Content ********/
-/* line 63, ../sass/screen.scss */
-.prompt {
-  margin-top: 10%;
-}
-
-/* line 66, ../sass/screen.scss */
-.continue {
-  position: relative;
-  bottom: 0px;
-  display: none;
-}
-
 /******** Home Page ********/
-/* line 74, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
 #homepage {
   text-align: center;
   top: 14em;
 }
 
-/* line 78, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 .start, .about {
   display: inline-block;
   text-decoration: none;
   line-height: 55px;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 .modalDialog {
   position: fixed;
   top: 0;
@@ -171,13 +158,13 @@ form {
   pointer-events: none;
 }
 
-/* line 98, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 .modalDialog:target {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 102, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 .modalDialog > div {
   width: 270px;
   height: 270px;
@@ -190,12 +177,12 @@ form {
   box-sizing: padding-box;
 }
 
-/* line 113, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 .modalDialog > div > * {
   color: #343434;
 }
 
-/* line 116, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 .close {
   background: #6FAFB5;
   color: #cream;
@@ -214,14 +201,14 @@ form {
   box-shadow: 1px 1px 3px #000;
 }
 
-/* line 133, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 .close:hover {
   background: #a5e8c8;
 }
 
 /******** For Text-answer questions ********/
-/* line 137, ../sass/screen.scss */
-.textAnswer, .continue, .start, .about {
+/* line 127, ../sass/screen.scss */
+.textAnswer, .start, .about, .continue {
   display: block;
   margin: 20px auto 20px auto;
   width: 200px;
@@ -230,7 +217,7 @@ form {
   font-size: 30px;
   color: #a5e8c8;
   background-color: #7c8093;
-  border: medium solid #f5f5f5;
+  border: 1px solid #f5f5f5;
   box-sizing: border-box;
   -webkit-border-radius: 7%;
   -moz-border-radius: 7%;
@@ -238,13 +225,13 @@ form {
 }
 
 /******** For Questions with Images ********/
-/* line 153, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 label > input {
   /* HIDE RADIO */
   display: none;
 }
 
-/* line 156, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 img, .fourOptions, .twoOptions {
   /* (UNCHECKED) IMAGE STYLES */
   cursor: pointer;
@@ -252,33 +239,45 @@ img, .fourOptions, .twoOptions {
   border-radius: 3px;
 }
 
-/* line 161, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 label > input:checked + img, label > input:checked + .fourOptions, label > input:checked + .twoOptions {
   /* (CHECKED) IMAGE STYLES */
   border: 2px solid #f5f5f5;
 }
 
 /* Styles the photos as a block*/
-/* line 165, ../sass/screen.scss */
+/* line 155, ../sass/screen.scss */
 .fourPhotos {
   text-align: center;
 }
 
-/* line 168, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 .twoPhotos {
   text-align: center;
 }
 
 /* Styles the individual photos*/
-/* line 172, ../sass/screen.scss */
+/* line 162, ../sass/screen.scss */
 .fourOptions {
   width: 180px;
   height: 180px;
 }
 
-/* line 177, ../sass/screen.scss */
+/* line 167, ../sass/screen.scss */
 .twoOptions {
   margin: 3px;
   width: 275px;
   height: 275px;
+}
+
+/******** Question Content ********/
+/* line 174, ../sass/screen.scss */
+.prompt {
+  margin-top: 10%;
+}
+
+/* line 177, ../sass/screen.scss */
+.continue {
+  position: relative;
+  display: none;
 }
