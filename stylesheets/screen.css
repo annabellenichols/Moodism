@@ -80,11 +80,10 @@ h1 {
   font-size: 135px;
   font-family: "Bad Script", "The Girl Next Door";
   font-style: italic;
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding-top: 25px;
 }
 
-/* line 35, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 h2 {
   text-align: center;
   color: #a5e8c8;
@@ -92,7 +91,7 @@ h2 {
   font-size: 45px;
 }
 
-/* line 43, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 p {
   text-align: center;
   color: #a5e8c8;
@@ -100,12 +99,12 @@ p {
   font-size: 35px;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 form {
   margin-top: 3%;
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 .side {
   display: block;
   margin-top: 25px;
@@ -120,22 +119,23 @@ form {
   line-height: 10px;
 }
 
-/* line 70, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 .prompt {
   margin-top: 10%;
 }
 
-/* line 74, ../sass/screen.scss */
-.fourPhotos {
+/* line 73, ../sass/screen.scss */
+.fourPhotos, .twoPhotos {
   text-align: center;
 }
 
-/* line 78, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 .textAnswer, .continue, .start, .about {
   display: block;
   margin: 20px auto 20px auto;
   width: 200px;
   height: 60px;
+  line-height: 60px;
   font-family: "Bad Script", "The Girl Next Door";
   font-size: 35px;
   color: #a5e8c8;
@@ -148,53 +148,73 @@ form {
 }
 
 /* line 94, ../sass/screen.scss */
-.continue {
-  position: relative;
-  bottom: 0px;
-  display: none;
+#year button[type=button] {
+  font-size: 45px;
 }
 
-/* line 101, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
+.continue:before {
+  content: " ";
+  display: block;
+}
+
+/* line 103, ../sass/screen.scss */
+.continue {
+  bottom: 0px;
+  display: none;
+  background-color: #51456c;
+  font-weight: 900;
+}
+
+/* line 112, ../sass/screen.scss */
 img {
+  display: inline-block;
   width: 180px;
   height: 180px;
   margin: 2px;
   border: 5px solid #000000;
   border-radius: 5px;
+  vertical-align: middle;
 }
 
-/* line 109, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
+.options, .label {
+  text-align: center;
+}
+
+/* line 127, ../sass/screen.scss */
 label > input {
   /* HIDE RADIO */
   display: none;
 }
 
-/* line 113, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 label > input + img {
   /* IMAGE STYLES */
   cursor: pointer;
   border: 2px solid transparent;
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .selected_btn, .selected_img {
   border: 7px solid #e6d500;
 }
 
-/* line 122, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 #homepage {
   text-align: center;
   top: 135px;
 }
 
-/* line 127, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 .start, .about {
   display: inline-block;
   text-decoration: none;
   line-height: 55px;
+  font-weight: 900;
 }
 
-/* line 134, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 .modalDialog {
   position: fixed;
   top: 0;
@@ -210,13 +230,13 @@ label > input + img {
   pointer-events: none;
 }
 
-/* line 149, ../sass/screen.scss */
+/* line 174, ../sass/screen.scss */
 .modalDialog:target {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 154, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 .modalDialog > div {
   width: 270px;
   height: 270px;
@@ -229,12 +249,12 @@ label > input + img {
   box-sizing: padding-box;
 }
 
-/* line 166, ../sass/screen.scss */
+/* line 193, ../sass/screen.scss */
 .modalDialog > div > * {
   color: #343434;
 }
 
-/* line 170, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 .close {
   background: #ffffcc;
   color: #FFFFFF;
@@ -253,12 +273,12 @@ label > input + img {
   box-shadow: 1px 1px 3px #000;
 }
 
-/* line 188, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 .close:hover {
   background: #a5e8c8;
 }
 
-/* line 190, ../sass/screen.scss */
+/* line 222, ../sass/screen.scss */
 .rightSide {
   text-align: center;
 }

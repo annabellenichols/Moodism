@@ -105,7 +105,7 @@ $(document).ready(function() {
         // check radio btn
         $selected.prev().attr('checked', true);
         // add continue button
-        $('.continue').show();
+        $('.continue').css("display", "block");
     }
 
     /* Handles selection of imgs */
@@ -128,6 +128,5 @@ $(document).ready(function() {
 
 
     // add event listeners on keys to allow to navigate between questions
-        // loadQuestion()
 
 });

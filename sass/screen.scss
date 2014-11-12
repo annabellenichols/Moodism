@@ -27,8 +27,7 @@ h1 {
 	font-size: $main-size;
     font-family: $font-family;
 	font-style: italic;
-    padding-top: $text-size;
-    padding-bottom: $text-size;
+    padding-top: $btn-text;
 }
 
 
@@ -71,7 +70,7 @@ form {
     margin-top: 10%;
 }
 
-.fourPhotos{
+.fourPhotos, .twoPhotos {
     text-align: center;
 }
 
@@ -80,6 +79,7 @@ form {
     margin: 20px auto 20px auto;
     width: 200px;
     height: 60px;
+    line-height: 60px;
     font-family: $font-family;
     font-size: $text-size;
     color: $main-green;
@@ -91,45 +91,69 @@ form {
 	border-radius: 7%;
 }
 
-.continue {
-    @extend .textAnswer;
-    position: relative;
-    bottom: 0px;
-    display: none;
+#year button[type=button] {
+    font-size: $question-size;
 }
 
-img{
+.continue:before {
+    content: " ";
+    display: block;
+}
+
+.continue {
+    @extend .textAnswer;
+    bottom: 0px;
+    display: none;
+    background-color: $main-purple;
+    font-weight: 900;
+}
+
+
+img {
+    display: inline-block;
     width: 180px;
     height: 180px;
     margin: 2px;
     border: 5px solid #000000;
     border-radius: 5px;
+    vertical-align: middle;
 }
 
-label > input{ /* HIDE RADIO */
-display:none;
+.options, .label {
+    text-align: center;
 }
 
-label > input + img{ /* IMAGE STYLES */
+
+label > input { /* HIDE RADIO */
+    display: none;
+}
+
+
+label > input + img { /* IMAGE STYLES */
     cursor: pointer;
     border: 2px solid transparent;
 }
 
+
 .selected_btn, .selected_img {
     border: 7px solid $main-yellow;
 }
+
 
 #homepage {
     text-align: center;
     top: $main-size;
 }
 
+
 .start, .about {
     @extend .textAnswer;
     display: inline-block;
     text-decoration: none;
     line-height: 55px;
+    font-weight: 900;
 }
+
 
 .modalDialog {
 	position: fixed;
@@ -146,10 +170,12 @@ label > input + img{ /* IMAGE STYLES */
 	pointer-events: none;
 }
 
+
 .modalDialog:target {
 	opacity:1;
 	pointer-events: auto;
 }
+
 
 .modalDialog > div {
 	width: 270px;
@@ -163,9 +189,11 @@ label > input + img{ /* IMAGE STYLES */
     box-sizing: padding-box;
 }
 
+
 .modalDialog > div > * {
     color: #343434;
 }
+
 
 .close {
 	background: #ffffcc;
@@ -185,7 +213,11 @@ label > input + img{ /* IMAGE STYLES */
 	box-shadow: 1px 1px 3px #000;
 }
 
-.close:hover { background: $main-green; }
+
+.close:hover {
+    background: $main-green;
+}
+
 
 .rightSide{
     text-align: center;
