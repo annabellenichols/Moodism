@@ -67,91 +67,77 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 13, ../sass/screen.scss */
+@font-family : 'The Girl Next Door', cursive;
+/* line 20, ../sass/screen.scss */
 body {
   background-image: url("../images/background.png");
 }
 
-/* line 17, ../sass/screen.scss */
+/* line 24, ../sass/screen.scss */
 h1 {
   color: #a5e8c8;
-  font-family: "Bad Script", cursive;
-  font-size: 100px;
-  font-family: "Bad Script", cursive;
+  font-family: "Bad Script", "The Girl Next Door";
+  font-size: 135px;
+  font-family: "Bad Script", "The Girl Next Door";
   font-style: italic;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
-/* line 28, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 h2 {
   text-align: center;
   color: #a5e8c8;
-  font-family: "Bad Script", cursive;
-  font-size: 35px;
+  font-family: "Bad Script", "The Girl Next Door";
+  font-size: 45px;
 }
 
-/* line 36, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 p {
   text-align: center;
   color: #a5e8c8;
-  font-family: "Bad Script", cursive;
-  font-size: 20px;
+  font-family: "Bad Script", "The Girl Next Door";
+  font-size: 35px;
 }
 
-/* line 44, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 form {
   margin-top: 3%;
 }
 
-/*
-button {
-    align-items: flex-start;
-    text-align: center;
-    cursor: default;
-    color: buttontext;
-    border: 2px outset buttonface;
-    border-image-source: initial;
-    border-image-slice: initial;
-    border-image-width: initial;
-    border-image-outset: initial;
-    border-image-repeat: initial;
-    background-color: buttonface;
-    box-sizing: border-box;
-}
-*/
-/* line 66, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 .side {
   display: block;
-  margin-bottom: 20px;
-  color: #000000;
+  margin-top: 25px;
+  color: #e6d500;
   border-radius: 50%;
-  border: 0px;
-  width: 40px;
-  height: 40px;
-  font-size: 30px;
-  background-color: #6fafb5;
-  border: 2px solid #000000;
+  width: 35px;
+  height: 35px;
+  font-size: 25px;
+  background-color: #51456c;
+  border: 2px solid #e5d293;
+  font-family: sans-serif;
+  line-height: 10px;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 .prompt {
   margin-top: 10%;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 .fourPhotos {
   text-align: center;
 }
 
-/* line 88, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 .textAnswer, .continue, .start, .about {
   display: block;
   margin: 20px auto 20px auto;
   width: 200px;
   height: 60px;
-  font-family: "Bad Script", cursive;
-  font-size: 30px;
+  font-family: "Bad Script", "The Girl Next Door";
+  font-size: 35px;
   color: #a5e8c8;
   background-color: #7c8093;
   border: medium solid #ffffff;
@@ -161,14 +147,14 @@ button {
   border-radius: 7%;
 }
 
-/* line 104, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 .continue {
   position: relative;
   bottom: 0px;
   display: none;
 }
 
-/* line 111, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 img {
   width: 180px;
   height: 180px;
@@ -177,47 +163,38 @@ img {
   border-radius: 5px;
 }
 
-/* line 119, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 label > input {
   /* HIDE RADIO */
   display: none;
 }
 
-/* line 123, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 label > input + img {
   /* IMAGE STYLES */
   cursor: pointer;
   border: 2px solid transparent;
 }
 
-/* line 128, ../sass/screen.scss */
-label > input:checked + img {
-  /* (CHECKED) IMAGE STYLES */
-  border: 7px solid #a5e8c8;
+/* line 118, ../sass/screen.scss */
+.selected_btn, .selected_img {
+  border: 7px solid #e6d500;
 }
 
-/* line 132, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 #homepage {
   text-align: center;
-  top: 14em;
+  top: 135px;
 }
 
-/*
-.start {
-    @extend .textAnswer;
-    display: inline-block;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-*/
-/* line 146, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 .start, .about {
   display: inline-block;
   text-decoration: none;
   line-height: 55px;
 }
 
-/* line 153, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 .modalDialog {
   position: fixed;
   top: 0;
@@ -233,13 +210,13 @@ label > input:checked + img {
   pointer-events: none;
 }
 
-/* line 168, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 .modalDialog:target {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 173, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 .modalDialog > div {
   width: 270px;
   height: 270px;
@@ -252,12 +229,12 @@ label > input:checked + img {
   box-sizing: padding-box;
 }
 
-/* line 185, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 .modalDialog > div > * {
   color: #343434;
 }
 
-/* line 189, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 .close {
   background: #ffffcc;
   color: #FFFFFF;
@@ -276,12 +253,12 @@ label > input:checked + img {
   box-shadow: 1px 1px 3px #000;
 }
 
-/* line 207, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
 .close:hover {
   background: #a5e8c8;
 }
 
-/* line 208, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 .rightSide {
   text-align: center;
 }

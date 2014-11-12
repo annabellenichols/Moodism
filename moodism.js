@@ -1,7 +1,11 @@
-//javascript file
-// This is jquery's way of saying document.addEventListener("DOMContentLoaded", function(){})
-// See http://learn.jquery.com/using-jquery-core/document-ready/ for more description
+
 $(document).ready(function() {
+    //start with homepage
+     $('.start').click(function(event) {
+             window.location.replace('question.html');
+        });
+
+
     // initialize app
     var $form = $('form');
     var questions = ['media', 'color', 'place', 'dog', 'year'];
