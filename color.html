@@ -1,0 +1,83 @@
+<!Doctype html>
+<html>
+
+<head>
+    <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="grid.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <div class="container_12">
+        <div class="grid_12">
+                <h1>M</h1>
+        </div>
+    </div>
+
+    <div class="container_12">
+        <div class="grid_2">
+            <div class="leftButtons">
+            <button type="button" class="side">&#8962</button>
+            <button type="button" class="side">?</button>
+            <button type="button" class="side">&#9993</button>
+        </div>
+        </div>
+
+    <!-- Media Type -->
+        <div class="grid_8">
+            <h2>Pick a color:</h2>
+
+            <form id="colors" class="fourPhotos">
+                <div class="twoPics">
+                    <label>
+                        <input type="radio" name="color" value="red" />
+                        <img class="fourOptions" src="images/red.jpg"/>
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="blue"/>
+                        <img class="fourOptions" src="images/blue.jpg"/>
+                    </label>
+                </div>
+                <div class="twoPics">
+                    <label>
+                        <input type="radio" name="color" value="yellow" />
+                        <img class="fourOptions" src="images/yellow.jpg"/>
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="green"/>
+                        <img class="fourOptions" id="green" src="images/green.png"/>
+                    </label>
+                </div>
+                <button type="submit" class="continue" id="colorContinue">Continue</button>
+            </form>
+        </div>
+
+        <div class="grid_2">
+            <!-- Right hand navigation buttons -->
+            <div class="rightButtons">
+                <button type="button" class="side"></button>
+                <button type="button" class="side"></button>
+                <button type="button" class="side"></button>
+                <button type="button" class="side"></button>
+                <button type="button" class="side"></button>
+            </div>
+        </div>
+
+    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var color = document.getElementById("green");
+    console.log("hello");
+    color.onclick = function(){
+        document.getElementById("colorContinue").style.display = "block";
+    }
+
+});
+</script>
+
+</body>
+
+</html>
+
