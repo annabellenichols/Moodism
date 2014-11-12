@@ -45,21 +45,21 @@ $(document).ready(function() {
     function init() {
         // handle form submition
         $form = $('form');
-        $form.off();
+        $form.off(); // prevent against multiple event handlers for the same event
         $form.submit(function(event) {
             formSubmit(event);
         });
         // enable nav_btn navigation
-        $('.nav_btn').click(function(event) {
+        $('.nav_btn').off().click(function(event) {
              navigate(event);
         });
         // handle selection: user can select testareas or imgs, depending on form
         // for textareas
-        $('.textAnswer').click(function(event) {
+        $('.textAnswer').off().click(function(event) {
             selectBtn(event);
         });
         // for images
-        $('img').click(function(event) {
+        $('img').off().click(function(event) {
             selectImg(event);
         });
     }
@@ -93,21 +93,15 @@ $(document).ready(function() {
         // change nav buttons color
         $nav_button = $('.nav_btn[data-questionref=' + page + ']');
         $nav_button.addClass('past_nav_btn');
-/*
-        // interactive question requires diferent handling
-        if (page === 'place') {
-            $('#questions_container').load('questions.html #' + answers.color.answer + '_' + page, init);
-        } else { // generic handling
-            $('#questions_container').load('questions.html #' + page, init);
-        }
-*/
+
+        // change pages using animation
         slide(page);
     }
 
-    /* Animates transitions between questions using a slider*/
+    /* Animates transitions between questions using a slider */
     function slide(newQuestion) {
         if (newQuestion == getQuestion()) {
-            // do nothing, because that question is already the one shown
+            // do nothing, because the new question is already the one shown
             return;
         }
 
@@ -141,8 +135,6 @@ $(document).ready(function() {
         // change question's container's position to relative in order for the animation to work
         $questionContainer.css({position: 'relative'});
 
-        // change also nav btn's position to relative in order for them to not move (aesthic purposese)
-
         // load new question
         // interactive question requires diferent handling
         if (newQuestion === 'place') {
@@ -151,11 +143,7 @@ $(document).ready(function() {
                 $questionContainer.animate({
                     top: '-' + containerHeight + 'px',
                     opacity: 0
-                }, {queue: false,
-                    done: function() { // on animation's (sucessful) completion
-                              slideDone($questionContainer, $tempContainer)
-                          }
-                   });
+                }, {queue: false});
                 $tempContainer.animate({
                     top: '-' + containerHeight + 'px',
                     opacity: 100
@@ -172,16 +160,12 @@ $(document).ready(function() {
                 $questionContainer.animate({
                     top: '-' + containerHeight + 'px',
                     opacity: 0
-                }, {queue: false,
-                    done: function() { // on animation's (sucessful) completion
-                              slideDone($questionContainer, $tempContainer);
-                          }
-                   });
+                }, {queue: false});
                 $tempContainer.animate({
                     top: '-' + containerHeight + 'px',
                     opacity: 100
                 }, {queue: false,
-                    done: function(){ // on animation's (sucessful) completion
+                    done: function(){ // on (both) animation's (sucessful) completion
                               slideDone($questionContainer, $tempContainer);
                           }
                    });
@@ -190,10 +174,7 @@ $(document).ready(function() {
         }
     }
 
-
-    // todo callback only once
-
-
+    /* Cleans the page after the animation has run */
     function slideDone($questionContainer, $tempContainer) {
         // set new container before nav btn
         $questionContainer.after($tempContainer.detach());
@@ -204,6 +185,8 @@ $(document).ready(function() {
         // remove main container and make temp container new main container
         $questionContainer.remove();
         $tempContainer.attr('id', 'questions_container');
+
+        // reset event listeners
         init();
     }
 
