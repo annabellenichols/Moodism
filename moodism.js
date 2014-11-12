@@ -2,25 +2,25 @@
 $(document).ready(function() {
     //modal window helpers
     $('#home').click(function(event) {
-            $(window).bind('beforeunload', function(){
-                return "Are you sure you want to leave? Your answers to the quiz may be lost.";
-                });
-            window.location.replace('index.html');
-        });
+        $(window).bind('beforeunload', function() {
+            return "Are you sure you want to leave? Your answers to the quiz may be lost.";
+            });
+        window.location.replace('index.html');
+    });
 
     $('#about').click(function(event) {
-            $(this).next()[0].click();
-        });
+        $(this).next()[0].click();
+    });
 
     $('#contact').click(function(event) {
-            $(this).next()[0].click();
-        });
+        $(this).next()[0].click();
+    });
 
 
     //start with homepage
      $('.start').click(function(event) {
-             window.location.replace('question.html');
-        });
+         window.location.replace('question.html');
+    });
 
 
     // initialize app
@@ -40,7 +40,7 @@ $(document).ready(function() {
 
 
     /*
-     * Initializes the app, and adds event listeners
+     * Initializes the app, and add event listeners
      */
     function init() {
         // handle form submition
@@ -75,45 +75,146 @@ $(document).ready(function() {
         // for css styling, add class values here
     }
 
+    /* Returns current question's name */
+    function getQuestion() {
+        var question = $form.parent().attr('id');
+        if (question.indexOf('_') !== -1) { // if it contains an underscore
+            // then the question's name is what appears after the _
+            question = question.split('_')[1];
+        }
+        return question;
+    }
+
     /*
      * Loads a question, using jQuery's ajax .load() method.
-     * Parameter: reference to question to load
-     *
-     * todo later: smooth transitions between questions using slider
+     * Parameters: reference to question to load (string)
      */
-    function loadQuestion(page, index) {
-        // chnage nav buttons color
-        $nav_button = $('.nav_btn').eq(index)
+    function loadQuestion(page) {
+        // change nav buttons color
+        $nav_button = $('.nav_btn[data-questionref=' + page + ']');
         $nav_button.addClass('past_nav_btn');
-
+/*
         // interactive question requires diferent handling
         if (page === 'place') {
             $('#questions_container').load('questions.html #' + answers.color.answer + '_' + page, init);
         } else { // generic handling
             $('#questions_container').load('questions.html #' + page, init);
         }
+*/
+        slide(page);
+    }
+
+    /* Animates transitions between questions using a slider*/
+    function slide(newQuestion) {
+        if (newQuestion == getQuestion()) {
+            // do nothing, because that question is already the one shown
+            return;
+        }
+
+        var $questionContainer = $('#questions_container');
+        // get question's container's width, height, and distance from left side of broser window
+        var containerHeight = $questionContainer.height();
+        var containerWidth = $questionContainer.width() - 15; // -10px due to padding and margins
+        var leftDistance = $questionContainer.offset().left;
+
+        // create temp container and hide it
+        var $tempContainer = $('<div class="grid_8" id="tempContainer">Dummy text!</div>').css(
+            {height: containerHeight,
+             width: containerWidth,
+             display: 'none'}
+        );
+        $questionContainer.after($tempContainer);
+
+        /*// find if new question comes after the current one, in order to slide in the correct direction
+        var slideTop, animateTop;
+        if (questions.indexOf(newQuestion) > questions.indexOf(getQuestion())) {
+            slideTop = '100%';    // position new question on top
+            animateTop = '-100%';
+        } else {  // new question comes before the current one
+            slideTop = '-100%';   // position new question on the bottom
+            animateTop = '100%';
+        }*/
+
+        // add temp container before or after main container
+        $tempContainer.css({position: 'relative', top: /*slideTop*/'100%', left: leftDistance, display: 'block', opacity: 0});
+
+        // change question's container's position to relative in order for the animation to work
+        $questionContainer.css({position: 'relative'});
+
+        // load new question
+        // interactive question requires diferent handling
+        if (newQuestion === 'place') {
+           $tempContainer.load('questions.html #' + answers.color.answer + '_' + newQuestion, function(){ // on content loaded
+                // animate slide
+                $questionContainer.animate({
+                    top: '-' + containerHeight + 'px',
+                    opacity: 0
+                }, {queue: false,
+                    done: function() { // on animation's (sucessful) completion
+                              slideDone($questionContainer, $tempContainer)
+                          }
+                   });
+                $tempContainer.animate({
+                    top: '-' + containerHeight + 'px',
+                    opacity: 100
+                }, {queue: false,
+                    done: function(){ // on animation's (sucessful) completion
+                              slideDone($questionContainer, $tempContainer);
+                          }
+                   });
+
+            });
+        } else { // generic handling
+            $tempContainer.load('questions.html #' + newQuestion, function(){ // on content loaded
+                // animate slide
+                $questionContainer.animate({
+                    top: '-' + containerHeight + 'px',
+                    opacity: 0
+                }, {queue: false,
+                    done: function() { // on animation's (sucessful) completion
+                              slideDone($questionContainer, $tempContainer)
+                          }
+                   });
+                $tempContainer.animate({
+                    top: '-' + containerHeight + 'px',
+                    opacity: 100
+                }, {queue: false,
+                    done: function(){ // on animation's (sucessful) completion
+                              slideDone($questionContainer, $tempContainer);
+                          }
+                   });
+
+            });
+        }
+    }
+
+    function slideDone($questionContainer, $tempContainer) {
+        // set position of new item
+        $tempContainer.css({top: 0, left: 0});
+        // remove main container and make temp container new main container
+        $questionContainer.remove();
+        $tempContainer.attr('id', 'questions_container');
+        init();
     }
 
     /* Enable nav button navigation */
     function navigate(event) {
-        var question = $form.parent().attr('id');
-        if (question.indexOf('_') !== -1) { // if it contains an underscore
-            // then the question's name is what appears after the _
-            question = question.split('_')[1];
-        }
-        // get current index
-        var currentIndex = questions.indexOf(question);
+        // use data attribute to identify btn
+        var destiny = $(event.target).data('questionref');
+        // check answer to check if the question was already answered
+        if (answers[destiny].answered) {
+            // remember current question so user can come back later
+            answers[getQuestion()].answered = true;
+            // navigate
+            loadQuestion(destiny);
+        } // else do nothing
     }
 
     /* Handles form submission */
     function formSubmit(event) {
         event.preventDefault();
         // get question's name
-        var question = $form.parent().attr('id');
-        if (question.indexOf('_') !== -1) { // if it contains an underscore
-            // then the question's name is what appears after the _
-            question = question.split('_')[1];
-        }
+        var question = getQuestion();
         // get selected radio btn (= answer)
         var selectedAnswer = $form.find(':checked').val();
         // save answer
@@ -160,9 +261,12 @@ $(document).ready(function() {
         $('.continue').css("display", "block", "important");
     }
 
+    // initiate app and add update 1st nav btn, to indicate to the user he/she's already in the 1st question
     init();
+    $('.nav_btn').eq(0).addClass('past_nav_btn');
 
 
     // add event listeners on keys to allow to navigate between questions
+
 
 });
