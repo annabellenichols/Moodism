@@ -1,5 +1,22 @@
 
 $(document).ready(function() {
+    //modal window helpers
+    $('#home').click(function(event) {
+            $(window).bind('beforeunload', function(){
+                return "Are you sure you want to leave? Your answers to the quiz may be lost.";
+                });
+            window.location.replace('index.html');
+        });
+
+    $('#about').click(function(event) {
+            $(this).next()[0].click();
+        });
+
+    $('#contact').click(function(event) {
+            $(this).next()[0].click();
+        });
+
+
     //start with homepage
      $('.start').click(function(event) {
              window.location.replace('question.html');
@@ -60,7 +77,11 @@ $(document).ready(function() {
      *
      * todo later: smooth transitions between questions using slider
      */
-    function loadQuestion(page) {
+    function loadQuestion(page, index) {
+        // chnage nav buttons color
+        $nav_button = $('.nav_btn').eq(index)
+        $nav_button.addClass('past_nav_btn');
+
         // interactive question requires diferent handling
         if (page === 'place') {
             $('#questions_container').load('questions.html #' + answers.color.answer + '_' + page, init);
@@ -68,6 +89,13 @@ $(document).ready(function() {
             $('#questions_container').load('questions.html #' + page, init);
         }
     }
+
+    /*
+    * Enable nav button navigation
+    */
+    $('.nav_btn').click(function(event) {
+             window.location.replace('question.html');
+        });
 
     /* Handles form submission */
     function formSubmit(event) {
@@ -85,7 +113,7 @@ $(document).ready(function() {
         // load next question
         var currentIndex = questions.indexOf(question);
         if (currentIndex < 4) { // if not last question
-            loadQuestion(questions[currentIndex + 1]);
+            loadQuestion(questions[currentIndex + 1], currentIndex);
         } else {
             // load final page
             window.location.replace('final.html');
@@ -105,7 +133,7 @@ $(document).ready(function() {
         // check radio btn
         $selected.prev().attr('checked', true);
         // add continue button
-        $('.continue').css("display", "block");
+        $('.continue').css("display", "block", "important");
     }
 
     /* Handles selection of imgs */
@@ -121,7 +149,7 @@ $(document).ready(function() {
         // check radio btn
         $selected.prev().attr('checked', true);
         // add continue button
-        $('.continue').show();
+        $('.continue').css("display", "block", "important");
     }
 
     init();

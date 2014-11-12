@@ -68,12 +68,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 @font-family : 'The Girl Next Door', cursive;
-/* line 20, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 body {
   background-image: url("../images/background.png");
 }
 
-/* line 24, ../sass/screen.scss */
+/* line 26, ../sass/screen.scss */
 h1 {
   color: #a5e8c8;
   font-family: "Bad Script", "The Girl Next Door";
@@ -83,7 +83,7 @@ h1 {
   padding-top: 25px;
 }
 
-/* line 34, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 h2 {
   text-align: center;
   color: #a5e8c8;
@@ -91,7 +91,7 @@ h2 {
   font-size: 45px;
 }
 
-/* line 42, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 p {
   text-align: center;
   color: #a5e8c8;
@@ -99,13 +99,13 @@ p {
   font-size: 35px;
 }
 
-/* line 50, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 form {
   margin-top: 3%;
 }
 
-/* line 54, ../sass/screen.scss */
-.side {
+/* line 56, ../sass/screen.scss */
+.side, .nav_btn {
   display: block;
   margin-top: 25px;
   color: #e6d500;
@@ -119,17 +119,27 @@ form {
   line-height: 10px;
 }
 
-/* line 69, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
+.nav_btn {
+  margin-left: 80%;
+}
+
+/* line 76, ../sass/screen.scss */
+.past_nav_btn {
+  background-color: #7c8093;
+}
+
+/* line 80, ../sass/screen.scss */
 .prompt {
   margin-top: 10%;
 }
 
-/* line 73, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 .fourPhotos, .twoPhotos {
   text-align: center;
 }
 
-/* line 77, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 .textAnswer, .continue, .start, .about {
   display: block;
   margin: 20px auto 20px auto;
@@ -147,18 +157,18 @@ form {
   border-radius: 7%;
 }
 
-/* line 94, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 #year button[type=button] {
   font-size: 45px;
 }
 
-/* line 98, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 .continue:before {
   content: " ";
   display: block;
 }
 
-/* line 103, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 .continue {
   bottom: 0px;
   display: none;
@@ -166,7 +176,7 @@ form {
   font-weight: 900;
 }
 
-/* line 112, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 img {
   display: inline-block;
   width: 180px;
@@ -177,36 +187,36 @@ img {
   vertical-align: middle;
 }
 
-/* line 122, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 .options, .label {
   text-align: center;
 }
 
-/* line 127, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 label > input {
   /* HIDE RADIO */
   display: none;
 }
 
-/* line 132, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 label > input + img {
   /* IMAGE STYLES */
   cursor: pointer;
   border: 2px solid transparent;
 }
 
-/* line 138, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 .selected_btn, .selected_img {
   border: 7px solid #e6d500;
 }
 
-/* line 143, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 #homepage {
   text-align: center;
   top: 135px;
 }
 
-/* line 149, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 .start, .about {
   display: inline-block;
   text-decoration: none;
@@ -214,7 +224,7 @@ label > input + img {
   font-weight: 900;
 }
 
-/* line 158, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 .modalDialog {
   position: fixed;
   top: 0;
@@ -230,31 +240,38 @@ label > input + img {
   pointer-events: none;
 }
 
-/* line 174, ../sass/screen.scss */
+/* line 185, ../sass/screen.scss */
 .modalDialog:target {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 180, ../sass/screen.scss */
+/* line 191, ../sass/screen.scss */
 .modalDialog > div {
-  width: 270px;
-  height: 270px;
+  width: 400px;
+  height: 400px;
   position: relative;
-  top: 75px;
+  top: 135px;
   border-radius: 50%;
-  margin: 10% auto;
+  margin: auto;
   background: #ffffcc;
   padding: 50px 40px 0px 40px;
   box-sizing: padding-box;
 }
 
-/* line 193, ../sass/screen.scss */
+/* line 204, ../sass/screen.scss */
 .modalDialog > div > * {
   color: #343434;
+  font-size: 25px;
 }
 
-/* line 198, ../sass/screen.scss */
+/* line 210, ../sass/screen.scss */
+.modalDialog > div > h2 {
+  color: #343434;
+  font-size: 45px;
+}
+
+/* line 215, ../sass/screen.scss */
 .close {
   background: #ffffcc;
   color: #FFFFFF;
@@ -273,12 +290,12 @@ label > input + img {
   box-shadow: 1px 1px 3px #000;
 }
 
-/* line 217, ../sass/screen.scss */
+/* line 234, ../sass/screen.scss */
 .close:hover {
   background: #a5e8c8;
 }
 
-/* line 222, ../sass/screen.scss */
+/* line 239, ../sass/screen.scss */
 .rightSide {
   text-align: center;
 }
