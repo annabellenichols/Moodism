@@ -8,6 +8,8 @@
 
 $background-color: #42444d;
 $main-green: #a5e8c8;
+$other-blue: #6FAFB5;
+$cream: #f5f5f5;
 $font-family: 'Bad Script', cursive;
 
 body{
@@ -71,8 +73,8 @@ button {
     width: 40px;
     height: 40px;
     font-size: 30px;
-    background-color: #6fafb5;
-    border: 2px solid #000000;
+    background-color: $other-blue;
+    border: 2px solid $cream;
 }
 .rightButtons{
     float: right;
@@ -84,7 +86,6 @@ button {
 .fourPhotos{
     text-align: center;
 }
-
 .textAnswer {
     display: block;
     margin: 20px auto 20px auto;
@@ -94,7 +95,7 @@ button {
     font-size: 30px;
     color: $main-green;
     background-color: #7c8093;
-    border: medium solid #ffffff;
+    border: medium solid $cream;
     box-sizing: border-box;
     -webkit-border-radius: 7%;
 	-moz-border-radius: 7%;
@@ -116,14 +117,20 @@ img{
     border-radius: 5px;
 }
 label > input{ /* HIDE RADIO */
-display:none;
+    display:none;
 }
 label > input + img{ /* IMAGE STYLES */
     cursor: pointer;
     border: 2px solid transparent;
 }
 label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
-    border: 7px solid $main-green;
+    border: 2px solid $cream;
+}
+.twoPics{
+    display: block;
+}
+#green{
+    display: inline;
 }
 #homepage {
     text-align: center;
@@ -173,7 +180,7 @@ label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
     top: 75px;
     border-radius: 50%;
 	margin: 10% auto;
-	background: #ffffcc;
+	background: $other-blue;
     padding: 50px 40px 0px 40px;
     box-sizing: padding-box;
 }
@@ -183,8 +190,8 @@ label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
 }
 
 .close {
-	background: #ffffcc;
-	color: #FFFFFF;
+	background: $other-blue;
+	color: #cream;
 	line-height: 35px;
 	position: absolute;
 	right: -12px;
@@ -200,7 +207,9 @@ label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
 	box-shadow: 1px 1px 3px #000;
 }
 
-.close:hover { background: $main-green; }
+.close:hover {
+    background: $main-green;
+    }
 .rightSide{
     text-align: center;
 }
