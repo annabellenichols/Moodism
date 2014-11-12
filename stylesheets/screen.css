@@ -1,7 +1,4 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -67,22 +64,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 15, ../sass/screen.scss */
+/******** Variables *******/
+/******** For ALL pages!!! ********/
+/* line 13, ../sass/screen.scss */
 body {
   background-image: url("../images/background.png");
 }
 
-/* line 19, ../sass/screen.scss */
+/******** Fonts ********/
+/* line 18, ../sass/screen.scss */
 h1 {
   color: #a5e8c8;
   font-family: "Bad Script", cursive;
   font-size: 100px;
-  font-family: "Bad Script", cursive;
   font-style: italic;
   padding-top: 20px;
+  float: left;
 }
 
-/* line 29, ../sass/screen.scss */
+/* line 26, ../sass/screen.scss */
 h2 {
   text-align: center;
   color: #a5e8c8;
@@ -90,7 +90,7 @@ h2 {
   font-size: 35px;
 }
 
-/* line 37, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 p {
   text-align: center;
   color: #a5e8c8;
@@ -98,28 +98,13 @@ p {
   font-size: 20px;
 }
 
-/* line 45, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 form {
   margin-top: 3%;
 }
 
-/*
-button {
-    align-items: flex-start;
-    text-align: center;
-    cursor: default;
-    color: buttontext;
-    border: 2px outset buttonface;
-    border-image-source: initial;
-    border-image-slice: initial;
-    border-image-width: initial;
-    border-image-outset: initial;
-    border-image-repeat: initial;
-    background-color: buttonface;
-    box-sizing: border-box;
-}
-*/
-/* line 67, ../sass/screen.scss */
+/******** Side Navigation ********/
+/* line 46, ../sass/screen.scss */
 .side {
   display: block;
   margin-bottom: 20px;
@@ -133,22 +118,28 @@ button {
   border: 2px solid #f5f5f5;
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
+.leftButtons {
+  float: left;
+}
+
+/* line 61, ../sass/screen.scss */
 .rightButtons {
   float: right;
 }
 
-/* line 82, ../sass/screen.scss */
+/******** Question Content ********/
+/* line 66, ../sass/screen.scss */
 .prompt {
   margin-top: 10%;
 }
 
-/* line 86, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 .fourPhotos {
   text-align: center;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 .textAnswer, .continue, .start, .about {
   display: block;
   margin: 20px auto 20px auto;
@@ -165,14 +156,14 @@ button {
   border-radius: 7%;
 }
 
-/* line 105, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 .continue {
   position: relative;
   bottom: 0px;
   display: none;
 }
 
-/* line 112, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 img {
   width: 180px;
   height: 180px;
@@ -181,57 +172,50 @@ img {
   border-radius: 5px;
 }
 
-/* line 119, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 label > input {
   /* HIDE RADIO */
   display: none;
 }
 
-/* line 122, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 label > input + img {
   /* IMAGE STYLES */
   cursor: pointer;
   border: 2px solid transparent;
 }
 
-/* line 126, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 label > input:checked + img {
   /* (CHECKED) IMAGE STYLES */
   border: 2px solid #f5f5f5;
 }
 
-/* line 129, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .twoPics {
   display: block;
 }
 
-/* line 132, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 #green {
   display: inline;
 }
 
-/* line 135, ../sass/screen.scss */
+/******** Home Page ********/
+/* line 121, ../sass/screen.scss */
 #homepage {
   text-align: center;
   top: 14em;
 }
 
-/*
-.start {
-    @extend .textAnswer;
-    display: inline-block;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-*/
-/* line 149, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .start, .about {
   display: inline-block;
   text-decoration: none;
   line-height: 55px;
 }
 
-/* line 156, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 .modalDialog {
   position: fixed;
   top: 0;
@@ -247,13 +231,13 @@ label > input:checked + img {
   pointer-events: none;
 }
 
-/* line 171, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 .modalDialog:target {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 176, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 .modalDialog > div {
   width: 270px;
   height: 270px;
@@ -266,12 +250,12 @@ label > input:checked + img {
   box-sizing: padding-box;
 }
 
-/* line 188, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 .modalDialog > div > * {
   color: #343434;
 }
 
-/* line 192, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 .close {
   background: #6FAFB5;
   color: #cream;
@@ -290,12 +274,7 @@ label > input:checked + img {
   box-shadow: 1px 1px 3px #000;
 }
 
-/* line 210, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 .close:hover {
   background: #a5e8c8;
-}
-
-/* line 213, ../sass/screen.scss */
-.rightSide {
-  text-align: center;
 }
