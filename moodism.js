@@ -45,6 +45,7 @@ $(document).ready(function() {
     function init() {
         // handle form submition
         $form = $('form');
+        $form.off();
         $form.submit(function(event) {
             formSubmit(event);
         });
@@ -72,7 +73,6 @@ $(document).ready(function() {
     function saveAnswer(key, answerValue) {
         answers[key].answer = answerValue;
         answers[key].answered = true;
-        // for css styling, add class values here
     }
 
     /* Returns current question's name */
@@ -87,7 +87,7 @@ $(document).ready(function() {
 
     /*
      * Loads a question, using jQuery's ajax .load() method.
-     * Parameters: reference to question to load (string)
+     * Parameters: name of question to load (string)
      */
     function loadQuestion(page) {
         // change nav buttons color
@@ -114,18 +114,18 @@ $(document).ready(function() {
         var $questionContainer = $('#questions_container');
         // get question's container's width, height, and distance from left side of broser window
         var containerHeight = $questionContainer.height();
-        var containerWidth = $questionContainer.width() - 15; // -10px due to padding and margins
-        var leftDistance = $questionContainer.offset().left;
+        var containerWidth = $questionContainer.width() - 20; // -20px due to padding and margins
+        var leftDistance = $questionContainer.offset().left + 10; // 10px due to having removed 20 before
 
         // create temp container and hide it
-        var $tempContainer = $('<div class="grid_8" id="tempContainer">Dummy text!</div>').css(
+        var $tempContainer = $('<div class="grid_8" id="tempContainer">').css(
             {height: containerHeight,
-             width: containerWidth,
+             width: ((containerWidth * 100) / $('window').width()), // convert to percentage
              display: 'none'}
         );
-        $questionContainer.after($tempContainer);
+        $('#main').append($tempContainer);
 
-        /*// find if new question comes after the current one, in order to slide in the correct direction
+        // find if new question comes after the current one, in order to slide in the correct direction
         var slideTop, animateTop;
         if (questions.indexOf(newQuestion) > questions.indexOf(getQuestion())) {
             slideTop = '100%';    // position new question on top
@@ -133,13 +133,15 @@ $(document).ready(function() {
         } else {  // new question comes before the current one
             slideTop = '-100%';   // position new question on the bottom
             animateTop = '100%';
-        }*/
+        }
 
         // add temp container before or after main container
-        $tempContainer.css({position: 'relative', top: /*slideTop*/'100%', left: leftDistance, display: 'block', opacity: 0});
+        $tempContainer.css({position: 'relative', top: slideTop, left: leftDistance, display: 'block', opacity: 0});
 
         // change question's container's position to relative in order for the animation to work
         $questionContainer.css({position: 'relative'});
+
+        // change also nav btn's position to relative in order for them to not move (aesthic purposese)
 
         // load new question
         // interactive question requires diferent handling
@@ -172,7 +174,7 @@ $(document).ready(function() {
                     opacity: 0
                 }, {queue: false,
                     done: function() { // on animation's (sucessful) completion
-                              slideDone($questionContainer, $tempContainer)
+                              slideDone($questionContainer, $tempContainer);
                           }
                    });
                 $tempContainer.animate({
@@ -188,7 +190,15 @@ $(document).ready(function() {
         }
     }
 
+
+    // todo callback only once
+
+
     function slideDone($questionContainer, $tempContainer) {
+        // set new container before nav btn
+        $questionContainer.after($tempContainer.detach());
+        // since $tempContainer was removed from the page, we must redo the refence to it (jQuery object)
+        $tempContainer = $('#tempContainer');
         // set position of new item
         $tempContainer.css({top: 0, left: 0});
         // remove main container and make temp container new main container
@@ -196,6 +206,10 @@ $(document).ready(function() {
         $tempContainer.attr('id', 'questions_container');
         init();
     }
+
+
+
+
 
     /* Enable nav button navigation */
     function navigate(event) {
@@ -222,7 +236,7 @@ $(document).ready(function() {
         // load next question
         var currentIndex = questions.indexOf(question);
         if (currentIndex < 4) { // if not last question
-            loadQuestion(questions[currentIndex + 1], currentIndex);
+            loadQuestion(questions[currentIndex + 1]);
         } else {
             // load final page
             window.location.replace('final.html');
