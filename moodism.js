@@ -48,6 +48,10 @@ $(document).ready(function() {
         $form.submit(function(event) {
             formSubmit(event);
         });
+        // enable nav_btn navigation
+        $('.nav_btn').click(function(event) {
+             navigate(event);
+        });
         // handle selection: user can select testareas or imgs, depending on form
         // for textareas
         $('.textAnswer').click(function(event) {
@@ -90,12 +94,16 @@ $(document).ready(function() {
         }
     }
 
-    /*
-    * Enable nav button navigation
-    */
-    $('.nav_btn').click(function(event) {
-             window.location.replace('question.html');
-        });
+    /* Enable nav button navigation */
+    function navigate(event) {
+        var question = $form.parent().attr('id');
+        if (question.indexOf('_') !== -1) { // if it contains an underscore
+            // then the question's name is what appears after the _
+            question = question.split('_')[1];
+        }
+        // get current index
+        var currentIndex = questions.indexOf(question);
+    }
 
     /* Handles form submission */
     function formSubmit(event) {
