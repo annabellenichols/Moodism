@@ -22,16 +22,16 @@ $modal: 400px;
 
 /* ======== Main Syling ======== */
 body{
-	background-image: url("../images/background.png");
+    background-image: url("../images/background.png");
 }
 
 /* ======== Fonts + Printing ======== */
 h1 {
-	color: $main-green;
-	font-family: $font-family;
-	font-size: $main-size;
+    color: $main-green;
     font-family: $font-family;
-	font-style: italic;
+    font-size: $main-size;
+    font-family: $font-family;
+    font-style: italic;
     padding-top: $btn-text;
 }
 
