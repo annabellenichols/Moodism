@@ -24,8 +24,17 @@ body{
 }
 
 #title {
-    font-size: 40px;
+    color: $main-green;
+    font-size: $text-size;
+    text-align: center;
+    padding-top: 50px;
+
 }
+
+#video{
+    margin-top:20px;
+}
+
 
 h1 {
 	color: $main-green;
@@ -71,6 +80,9 @@ form {
     line-height: 10px;
 }
 
+.videoResult{
+    margin: 100px auto 100px auto;
+}
 
 .nav_btn {
     @extend .side;
@@ -122,6 +134,9 @@ form {
     background-color: $main-purple;
     font-weight: 900;
 }
+.startOver{
+   @extend .textAnswer;
+}
 
 
 img {
@@ -134,7 +149,7 @@ img {
     vertical-align: middle;
 }
 
-.options, .label {
+.options, .label{
     text-align: center;
 }
 
