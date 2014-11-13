@@ -253,6 +253,7 @@ $(document).ready(function() {
     // slide top to bottom instead of bottom to top only
     // when going to previous questions, highlight previous answer and keep continue btn on
     // session storage for answers (use for final screen)
+    // fix final page (`start over` and css)
 
 
 });
