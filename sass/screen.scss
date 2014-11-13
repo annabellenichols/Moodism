@@ -117,31 +117,45 @@ p {
     left: 0;
     background: rgba(0,0,0,0.5);
     z-index: 99999;
-    opacity:0;
+    opacity: 0;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
     pointer-events: none;
+    color: black !important;
 }
+
 .modalDialog:target {
-    opacity:1;
+    opacity: 1;
     pointer-events: auto;
 }
+
 .modalDialog > div {
     width: $modal;
     height: $modal;
     position: relative;
-    top: $main-size;
+    top: $question-size;
     border-radius: 50%;
     margin: auto;
     background: #ffffcc;
-    padding: 50px 40px 0px 40px;
     box-sizing: padding-box;
 }
-.modalDialog > div > * {
+
+
+.modalDialog > div > div > * {
     color: #343434;
+}
+
+.modalDialog > div > div > p {
     font-size: $btn-text;
 }
+
+.modalDialog > div > div {
+    position: relative;
+    top: 50px;
+    margin: 50px 40px 0px 40px;
+}
+
 .modalDialog > div > h2 {
     color: #343434;
     font-size: $question-size;
@@ -153,8 +167,8 @@ p {
     position: absolute;
     right: -12px;
     text-align: center;
-    top: -1px;
-    right: 30px;
+    top: -50px;
+    right: 15px;
     width: 35px;
     text-decoration: none;
     font-weight: bold;
