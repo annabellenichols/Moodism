@@ -133,16 +133,11 @@ $(document).ready(function() {
                 $questionContainer.animate({
                     top: '-' + containerHeight + 'px',
                     opacity: 0
-                }, {queue: false});
-                $tempContainer.animate({
-                    top: '-' + containerHeight + 'px',
-                    opacity: 100
                 }, {queue: false,
                     done: function(){ // on animation's (successful) completion
                               slideDone($questionContainer, $tempContainer);
                           }
                    });
-
             });
         } else { // generic handling
             $tempContainer.load('questions.html #' + newQuestion, function(){ // on content loaded
@@ -150,16 +145,11 @@ $(document).ready(function() {
                 $questionContainer.animate({
                     top: '-' + containerHeight + 'px',
                     opacity: 0
-                }, {queue: false});
-                $tempContainer.animate({
-                    top: '-' + containerHeight + 'px',
-                    opacity: 100
                 }, {queue: false,
-                    done: function(){ // on (both) animation's (successful) completion
+                    done: function(){ // on animation's (successful) completion
                               slideDone($questionContainer, $tempContainer);
                           }
                    });
-
             });
         }
     }
@@ -171,7 +161,7 @@ $(document).ready(function() {
         // since $tempContainer was removed from the page, we must redo the refence to it (jQuery object)
         $tempContainer = $('#tempContainer');
         // set position of new item
-        $tempContainer.css({top: 0, left: 0});
+        $tempContainer.css({top: 0, left: 0, opacity: 100});
         // remove main container and make temp container new main container
         $questionContainer.remove();
         $tempContainer.attr('id', 'questions_container');
