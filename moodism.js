@@ -1,27 +1,35 @@
 
 $(document).ready(function() {
     //modal window helpers
-    $('#home').click(function(event) {
+    $('#home').click(function() {
         $(window).bind('beforeunload', function() {
-            return "Are you sure you want to leave? Your answers to the quiz may be lost.";
+                return "Are you sure you want to leave? Your answers to the quiz may be lost.";
             });
         window.location.replace('index.html');
     });
 
-    $('#about').click(function(event) {
+    $('#about').click(function() {
         $(this).next()[0].click();
     });
 
-    $('#contact').click(function(event) {
+    $('#contact').click(function() {
         $(this).next()[0].click();
     });
 
-
-    //start with homepage
-     $('.start').click(function(event) {
+    // start with homepage
+     $('.start').click(function() {
          window.location.replace('question.html');
     });
 
+    // final page's start over
+    $('.startOver').click(function() {
+        // clean answers
+        for (key in answers) {
+            answers[key] = {answer: '', answered: false};
+        }
+        // go back to homepage
+         window.location.replace('index.html');
+    });
 
     // initialize app
     var $form = $('form');
@@ -86,6 +94,36 @@ $(document).ready(function() {
     }
 
     /*
+     * Highlights the previous answer chosen for the question, if it was answered previously
+     * Parameters: name of question (string)
+     */
+    function getAnswer(page) {
+        // check if question was answered
+        if (answers[page].answered) {
+            var previousAnswer = answers[page].answer;
+            // check if answer exists (i.e. not null or undefined)
+            if (previousAnswer) {
+                // get previous answer element
+                var $answerRadio = $form.find('input[value="' + previousAnswer + '"]');
+                // find out if answer element is an image or a btn
+                var $answerEl = $answerRadio.next();
+                if ($answerEl.is('img')) { // if img
+                    // highlight selected - add class: selected_img
+                    $answerEl.addClass('selected_img');
+                } else { // it's a btn
+                    // highlight selected - add class: selected_btn if btn
+                    $answerEl.addClass('selected_btn');
+                }
+
+                // check radio btn
+                $answerRadio.attr('checked', true);
+                // add continue button
+                $('.continue').css("display", "block", "important");
+            }
+        }
+    }
+
+    /*
      * Loads a question, using jQuery's ajax .load() method.
      * Parameters: name of question to load (string)
      */
@@ -103,6 +141,13 @@ $(document).ready(function() {
         if (newQuestion == getQuestion()) {
             // do nothing, because the new question is already the one shown
             return;
+        }
+
+        // check if the new question comes before or after the current one, and animate accordingly
+        var slideDirection = '-';
+        if (questions.indexOf(newQuestion) < questions.indexOf(getQuestion())) {
+            // if new question comes before, slide from bottom to top
+            slideDirection = '';
         }
 
         var $questionContainer = $('#questions_container');
@@ -131,7 +176,7 @@ $(document).ready(function() {
            $tempContainer.load('questions.html #' + answers.color.answer + '_' + newQuestion, function(){ // on content loaded
                 // animate slide
                 $questionContainer.animate({
-                    top: '-' + containerHeight + 'px',
+                    top: slideDirection + containerHeight + 'px',
                     opacity: 0
                 }, {queue: false,
                     done: function(){ // on animation's (successful) completion
@@ -143,7 +188,7 @@ $(document).ready(function() {
             $tempContainer.load('questions.html #' + newQuestion, function(){ // on content loaded
                 // animate slide
                 $questionContainer.animate({
-                    top: '-' + containerHeight + 'px',
+                    top: slideDirection + containerHeight + 'px',
                     opacity: 0
                 }, {queue: false,
                     done: function(){ // on animation's (successful) completion
@@ -168,6 +213,9 @@ $(document).ready(function() {
 
         // reset event listeners
         init();
+
+        // if going to previous questions, highlight previous answer and keep continue btn on
+        getAnswer(getQuestion());
     }
 
     /* Enable nav button navigation */
@@ -238,12 +286,13 @@ $(document).ready(function() {
     init();
     $('.nav_btn').eq(0).addClass('past_nav_btn');
 
-    // TODO:
     // add event listeners on keys to allow to navigate between questions
-    // slide top to bottom instead of bottom to top only
-    // when going to previous questions, highlight previous answer and keep continue btn on
+
+
+    // TODO:
     // session storage for answers (use for final screen)
     // fix final page (`start over` and css)
 
 
 });
+
