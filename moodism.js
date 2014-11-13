@@ -109,9 +109,9 @@ $(document).ready(function() {
         // get question's container's width, height, and distance from left side of broser window
         var containerHeight = $questionContainer.height();
         var containerWidth = $questionContainer.width() - 20; // -20px due to padding and margins
-        var leftDistance = $questionContainer.offset().left - 65; // 10px due to having removed 20 before
+        var leftDistance = $questionContainer.offset().left - 65; // -65px due to having removed 20 before
 
-        // create temp container and hide it
+        // create temp container for next question and hide it
         var $tempContainer = $('<div class="grid_8" id="tempContainer">').css(
             {height: containerHeight,
              width: ((containerWidth * 100) / $('window').width()), // convert to percentage
@@ -119,7 +119,7 @@ $(document).ready(function() {
         );
         $('#main').append($tempContainer);
 
-        // add temp container before or after main container
+        // add temp container after main container
         $tempContainer.css({position: 'relative', top: '100%', left: leftDistance, display: 'block', opacity: 0});
 
         // change question's container's position to relative in order for the animation to work
@@ -138,7 +138,7 @@ $(document).ready(function() {
                     top: '-' + containerHeight + 'px',
                     opacity: 100
                 }, {queue: false,
-                    done: function(){ // on animation's (sucessful) completion
+                    done: function(){ // on animation's (successful) completion
                               slideDone($questionContainer, $tempContainer);
                           }
                    });
@@ -155,7 +155,7 @@ $(document).ready(function() {
                     top: '-' + containerHeight + 'px',
                     opacity: 100
                 }, {queue: false,
-                    done: function(){ // on (both) animation's (sucessful) completion
+                    done: function(){ // on (both) animation's (successful) completion
                               slideDone($questionContainer, $tempContainer);
                           }
                    });
@@ -180,20 +180,16 @@ $(document).ready(function() {
         init();
     }
 
-
-
-
-
     /* Enable nav button navigation */
     function navigate(event) {
         // use data attribute to identify btn
-        var destiny = $(event.target).data('questionref');
+        var destination = $(event.target).data('questionref');
         // check answer to check if the question was already answered
-        if (answers[destiny].answered) {
+        if (answers[destination].answered) {
             // remember current question so user can come back later
             answers[getQuestion()].answered = true;
             // navigate
-            loadQuestion(destiny);
+            loadQuestion(destination);
         } // else do nothing
     }
 
@@ -252,8 +248,11 @@ $(document).ready(function() {
     init();
     $('.nav_btn').eq(0).addClass('past_nav_btn');
 
-
+    // TODO:
     // add event listeners on keys to allow to navigate between questions
+    // slide top to bottom instead of bottom to top only
+    // when going to previous questions, highlight previous answer and keep continue btn on
+    // session storage for answers (use for final screen)
 
 
 });
