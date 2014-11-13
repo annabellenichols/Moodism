@@ -87,8 +87,26 @@ body {
   margin-top: 20px;
 }
 
+/* line 40, ../sass/screen.scss */
+#media, #color, #red-place, #blue-place, #green-place, #yellow-place, #dog, #year {
+  width: 400px;
+  margin: 0px auto;
+  position: relative;
+  top: -40px;
+}
+
+/* line 48, ../sass/screen.scss */
+#color, #dog {
+  top: -80px;
+}
+
+/* line 52, ../sass/screen.scss */
+#media {
+  top: -15px;
+}
+
 /* ======== Fonts + Printing ======== */
-/* line 41, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 h1 {
   color: #a5e8c8;
   font-family: "Bad Script", "The Girl Next Door";
@@ -98,7 +116,7 @@ h1 {
   padding-top: 25px;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 h2 {
   text-align: center;
   color: #a5e8c8;
@@ -106,7 +124,7 @@ h2 {
   font-size: 45px;
 }
 
-/* line 59, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 p {
   text-align: center;
   color: #a5e8c8;
@@ -115,7 +133,7 @@ p {
 }
 
 /* ======== Side Navigation ======== */
-/* line 67, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 .side, .nav_btn {
   display: block;
   margin-top: 25px;
@@ -130,23 +148,23 @@ p {
   line-height: 10px;
 }
 
-/* line 82, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 .videoResult {
   margin: 100px auto 100px auto;
 }
 
-/* line 86, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 .nav_btn {
   margin-left: 80%;
 }
 
-/* line 90, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 .past_nav_btn {
   background-color: #7c8093;
 }
 
 /* ======== "About" Modal ======== */
-/* line 95, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 .modalDialog {
   position: fixed;
   top: 0;
@@ -162,13 +180,13 @@ p {
   pointer-events: none;
 }
 
-/* line 109, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 .modalDialog:target {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 113, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .modalDialog > div {
   width: 400px;
   height: 400px;
@@ -181,19 +199,19 @@ p {
   box-sizing: padding-box;
 }
 
-/* line 124, ../sass/screen.scss */
+/* line 141, ../sass/screen.scss */
 .modalDialog > div > * {
   color: #343434;
   font-size: 25px;
 }
 
-/* line 128, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 .modalDialog > div > h2 {
   color: #343434;
   font-size: 45px;
 }
 
-/* line 132, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 .close {
   background: #ffffcc;
   color: #f5f5f5;
@@ -212,13 +230,13 @@ p {
   box-shadow: 1px 1px 3px #000;
 }
 
-/* line 149, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 .close:hover {
   background: #a5e8c8;
 }
 
 /* ======== Text-based Questions ======== */
-/* line 153, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 .textAnswer, .continue, .startOver, .start, .about {
   display: block;
   margin: 20px auto 20px auto;
@@ -237,23 +255,23 @@ p {
 }
 
 /* ======== Photo-based Questions ======== */
-/* line 170, ../sass/screen.scss */
+/* line 187, ../sass/screen.scss */
 .fourPhotos, .twoPhotos {
   text-align: center;
 }
 
-/* line 173, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 #year button[type=button] {
   font-size: 45px;
 }
 
-/* line 178, ../sass/screen.scss */
+/* line 195, ../sass/screen.scss */
 .continue:before {
   content: " ";
   display: block;
 }
 
-/* line 183, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 .continue {
   bottom: 0px;
   display: none;
@@ -261,7 +279,7 @@ p {
   font-weight: 900;
 }
 
-/* line 196, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 img {
   display: inline-block;
   width: 180px;
@@ -272,37 +290,37 @@ img {
   vertical-align: middle;
 }
 
-/* line 207, ../sass/screen.scss */
+/* line 224, ../sass/screen.scss */
 .options, .label {
   text-align: center;
 }
 
-/* line 211, ../sass/screen.scss */
+/* line 228, ../sass/screen.scss */
 label > input {
   /* HIDE RADIO */
   display: none;
 }
 
-/* line 214, ../sass/screen.scss */
+/* line 231, ../sass/screen.scss */
 label > input + img {
   /* IMAGE STYLES */
   cursor: pointer;
   border: 2px solid transparent;
 }
 
-/* line 218, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
 .selected_btn, .selected_img {
   border: 4px solid #f5f5f5;
 }
 
 /* ======== Home Page ======== */
-/* line 223, ../sass/screen.scss */
+/* line 240, ../sass/screen.scss */
 #homepage {
   text-align: center;
   top: 135px;
 }
 
-/* line 229, ../sass/screen.scss */
+/* line 246, ../sass/screen.scss */
 .start, .about {
   display: inline-block;
   text-decoration: none;
@@ -312,23 +330,23 @@ label > input + img {
 }
 
 /* ======== All Questions ======== */
-/* line 239, ../sass/screen.scss */
+/* line 256, ../sass/screen.scss */
 form {
   margin-top: 3%;
 }
 
-/* line 242, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 .prompt {
   margin-top: 10%;
 }
 
-/* line 245, ../sass/screen.scss */
+/* line 262, ../sass/screen.scss */
 .continue:before {
   content: " ";
   display: block;
 }
 
-/* line 249, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
 .continue {
   bottom: 0px;
   display: none;

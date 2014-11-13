@@ -36,6 +36,23 @@ body{
     margin-top:20px;
 }
 
+
+#media, #color, #red-place, #blue-place, #green-place, #yellow-place, #dog, #year {
+    width: 400px;
+    margin: 0px auto;
+    position: relative;
+    top: -40px;
+}
+
+
+#color, #dog {
+    top: -80px;
+}
+
+#media {
+    top: -15px;
+}
+
 /* ======== Fonts + Printing ======== */
 
 h1 {
