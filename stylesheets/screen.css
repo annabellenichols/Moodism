@@ -312,8 +312,8 @@ iframe {
 
 /* line 244, ../sass/screen.scss */
 #final {
-  position: absolute;
-  top: 30px;
+  position: relative;
+  top: -130px;
 }
 
 /* line 249, ../sass/screen.scss */
