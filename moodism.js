@@ -342,8 +342,6 @@ $(document).ready(function() {
 
     // TODO:
     // session storage for answers (use for final screen)
-    // fix final page (`start over` and css)
-
 
 });
 
