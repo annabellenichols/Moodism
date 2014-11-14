@@ -65,7 +65,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* ======== Variables ======== */
-@font-family : 'The Girl Next Door', cursive;
+@font-family : 'The Girl Next Door';
 /* ======== General Styling ======== */
 /* line 3, ../sass/_general.scss */
 html {
@@ -101,29 +101,29 @@ body {
 }
 
 /* ======== Fonts + Printing ======== */
-/* line 35, ../sass/_general.scss */
+/* line 34, ../sass/_general.scss */
 h1 {
   color: #a5e8c8;
-  font-family: "Bad Script", "The Girl Next Door";
+  font-family: "The Girl Next Door";
   font-size: 135px;
-  font-family: "Bad Script", "The Girl Next Door";
+  font-family: "The Girl Next Door";
   font-style: italic;
   padding-top: 25px;
 }
 
-/* line 45, ../sass/_general.scss */
+/* line 44, ../sass/_general.scss */
 h2 {
   text-align: center;
   color: #a5e8c8;
-  font-family: "Bad Script", "The Girl Next Door";
+  font-family: "The Girl Next Door";
   font-size: 45px;
 }
 
-/* line 53, ../sass/_general.scss */
+/* line 52, ../sass/_general.scss */
 p {
   text-align: center;
   color: #a5e8c8;
-  font-family: "Bad Script", "The Girl Next Door";
+  font-family: "The Girl Next Door";
   font-size: 35px;
 }
 
@@ -211,6 +211,71 @@ p {
   background: #a5e8c8;
 }
 
+/* ======== Arrow styling ======== */
+/* line 3, ../sass/_arrow.scss */
+.arrow {
+  position: absolute;
+  background: #a5e8c8;
+  border: 4px solid #7c8093;
+  left: 35px;
+  top: 15px;
+  font-size: 17px;
+  font-family: "The Girl Next Door";
+  text-align: center;
+  height: 35px;
+  width: 70px;
+  padding: 5px;
+  font-weight: 600;
+  border-radius: 30%;
+  display: inline-block;
+  -webkit-animation: fade_in 3s ease forwards;
+  -moz-animation: fade_in 3s ease forwards;
+}
+
+@-moz-keyframes fade_in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade_in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* line 32, ../sass/_arrow.scss */
+.arrow:after, .arrow:before {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* line 43, ../sass/_arrow.scss */
+.arrow:after {
+  border-color: transparent;
+  border-left-color: #a5e8c8;
+  border-width: 10px;
+  margin-top: -10px;
+}
+
+/* line 49, ../sass/_arrow.scss */
+.arrow:before {
+  border-color: transparent;
+  border-left-color: #7c8093;
+  border-width: 16px;
+  margin-top: -16px;
+}
+
 /* ======== Text-based Questions ======== */
 /* line 3, ../sass/_text_question.scss */
 .textAnswer, .continue, .start, .about, .startOver {
@@ -219,7 +284,7 @@ p {
   width: 200px;
   height: 60px;
   line-height: 60px;
-  font-family: "Bad Script", "The Girl Next Door";
+  font-family: "The Girl Next Door";
   font-size: 35px;
   color: #a5e8c8;
   background-color: #7c8093;
@@ -324,7 +389,7 @@ label > input + img {
 
 /* line 21, ../sass/_side_buttons.scss */
 .past_nav_btn {
-  background-color: #7c8093;
+  background-color: #296c4c;
 }
 
 /* ======== Home Page ======== */

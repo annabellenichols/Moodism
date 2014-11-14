@@ -132,6 +132,11 @@ $(document).ready(function() {
         $nav_button = $('.nav_btn[data-questionref=' + page + ']');
         $nav_button.addClass('past_nav_btn');
 
+        // ckeck if "you are here" arrow exists
+        if( $('.arrow').length ) {
+            $('.arrow').css("display", "none", "important");
+        }
+
         // change pages using animation
         slide(page);
     }
