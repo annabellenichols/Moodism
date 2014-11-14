@@ -151,6 +151,13 @@ $(document).ready(function() {
         }
 
         var $questionContainer = $('#questions_container');
+
+        // check no animation is already running
+        if($questionContainer.is(':animated')) {
+            return;
+        }
+
+
         // get question's container's width, height, and distance from left side of broser window
         var containerHeight = $questionContainer.height();
         var containerWidth = $questionContainer.width() - 20; // -20px due to padding and margins
@@ -282,12 +289,56 @@ $(document).ready(function() {
         $('.continue').css("display", "block", "important");
     }
 
+    /* Handles "scrolling" to next question */
+    function scrollNext() {
+        // check if next question has been answered
+        var nextQuestion = questions[questions.indexOf(getQuestion()) + 1];
+        if (answers[nextQuestion].answered) {
+            // navigate to the next question
+            loadQuestion(nextQuestion);
+        }
+    }
+
+    /* Handles "scrolling" to previous question */
+    function scrollPrevious() {
+        // else if left or bottom arrow, navigate to previous question
+        var prevQuestionIndex = questions.indexOf(getQuestion()) - 1;
+        // if there is no previous question, do nothing
+        if (prevQuestionIndex < 0) {
+            return;
+        }
+        // remember current question so user can come back later
+        answers[getQuestion()].answered = true;
+        // go to previous question
+        loadQuestion(questions[prevQuestionIndex]);
+    }
+
     // initiate app and add update 1st nav btn, to indicate to the user he/she's already in the 1st question
     init();
     $('.nav_btn').eq(0).addClass('past_nav_btn');
 
     // add event listeners on keys to allow to navigate between questions
+    $(document).on('keydown', function(event) {
+        // if it was right or top arrow
+        if (event.keyCode == 40 || event.keyCode == 39) {
+            scrollNext();
+        } else if (event.keyCode == 37 || event.keyCode == 38) {
+            scrollPrevious();
+        }
+        // else do nothing
+    });
 
+    // add event listeners on mouse wheel to allow to navigate between questions (via scrolling)
+    $(window).bind('mousewheel', function(event) {
+    if (event.originalEvent.wheelDelta >= 0) {
+        scrollNext();
+    }
+    else {
+        scrollPrevious();
+    }
+
+
+});
 
     // TODO:
     // session storage for answers (use for final screen)
