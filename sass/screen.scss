@@ -40,11 +40,6 @@ body{
 
 }
 
-#video{
-    margin-top:20px;
-}
-
-
 #media, #color, #red-place, #blue-place, #green-place, #yellow-place, #dog, #year {
     width: 400px;
     margin: 0px auto;
@@ -101,11 +96,6 @@ p {
     border: 2px solid $cream;
     font-family: sans-serif;
     line-height: 10px;
-}
-
-
-.videoResult{
-    margin: 100px auto 100px auto;
 }
 
 .nav_btn {
@@ -191,7 +181,7 @@ p {
 /* ======== Text-based Questions ======== */
 .textAnswer {
     display: block;
-    margin: 20px auto 20px auto;
+    margin: 20px auto;
     width: 200px;
     height: 60px;
     line-height: 60px;
@@ -247,8 +237,17 @@ iframe {
     margin: 50px auto;
 }
 
+#finalside {
+    margin-left: 12px;
+}
+
 #final {
-    margin-top: 30px;
+    position: absolute;
+    top: 30px;
+}
+
+#final * {
+    text-align: center;
 }
 
 .options, .label{
@@ -263,7 +262,7 @@ label > input + img { /* IMAGE STYLES */
     border: 2px solid transparent;
 }
 .selected_btn, .selected_img {
-    border: 4px solid $cream;
+    border: 7px solid $cream;
 }
 
 /* ======== Home Page ======== */

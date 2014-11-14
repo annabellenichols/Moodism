@@ -92,11 +92,6 @@ body {
 }
 
 /* line 43, ../sass/screen.scss */
-#video {
-  margin-top: 20px;
-}
-
-/* line 48, ../sass/screen.scss */
 #media, #color, #red-place, #blue-place, #green-place, #yellow-place, #dog, #year {
   width: 400px;
   margin: 0px auto;
@@ -104,18 +99,18 @@ body {
   top: -40px;
 }
 
-/* line 56, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 #color, #dog {
   top: -80px;
 }
 
-/* line 60, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 #media {
   top: -15px;
 }
 
 /* ======== Fonts + Printing ======== */
-/* line 66, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 h1 {
   color: #a5e8c8;
   font-family: "Bad Script", "The Girl Next Door";
@@ -125,7 +120,7 @@ h1 {
   padding-top: 25px;
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 h2 {
   text-align: center;
   color: #a5e8c8;
@@ -133,7 +128,7 @@ h2 {
   font-size: 45px;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 p {
   text-align: center;
   color: #a5e8c8;
@@ -142,7 +137,7 @@ p {
 }
 
 /* ======== Side Navigation ======== */
-/* line 92, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 .side, .nav_btn {
   display: block;
   margin-top: 25px;
@@ -157,23 +152,18 @@ p {
   line-height: 10px;
 }
 
-/* line 107, ../sass/screen.scss */
-.videoResult {
-  margin: 100px auto 100px auto;
-}
-
-/* line 111, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .nav_btn {
   margin-left: 80%;
 }
 
-/* line 115, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 .past_nav_btn {
   background-color: #7c8093;
 }
 
 /* ======== "About" Modal ======== */
-/* line 120, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .modalDialog {
   position: fixed;
   top: 0;
@@ -190,13 +180,13 @@ p {
   color: black !important;
 }
 
-/* line 136, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 .modalDialog:target {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 141, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 .modalDialog > div {
   width: 400px;
   height: 400px;
@@ -208,30 +198,30 @@ p {
   box-sizing: padding-box;
 }
 
-/* line 153, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .modalDialog > div > div > * {
   color: #343434;
 }
 
-/* line 157, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 .modalDialog > div > div > p {
   font-size: 25px;
 }
 
-/* line 161, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 .modalDialog > div > div {
   position: relative;
   top: 50px;
   margin: 50px 40px 0px 40px;
 }
 
-/* line 167, ../sass/screen.scss */
+/* line 157, ../sass/screen.scss */
 .modalDialog > div > h2 {
   color: #343434;
   font-size: 45px;
 }
 
-/* line 171, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 .close {
   background: #ffffcc;
   color: #f5f5f5;
@@ -250,16 +240,16 @@ p {
   box-shadow: 1px 1px 3px #000;
 }
 
-/* line 188, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 .close:hover {
   background: #a5e8c8;
 }
 
 /* ======== Text-based Questions ======== */
-/* line 192, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .textAnswer, .continue, .startOver, .start, .about {
   display: block;
-  margin: 20px auto 20px auto;
+  margin: 20px auto;
   width: 200px;
   height: 60px;
   line-height: 60px;
@@ -275,23 +265,23 @@ p {
 }
 
 /* ======== Photo-based Questions ======== */
-/* line 209, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 .fourPhotos, .twoPhotos {
   text-align: center;
 }
 
-/* line 212, ../sass/screen.scss */
+/* line 202, ../sass/screen.scss */
 #year button[type=button] {
   font-size: 45px;
 }
 
-/* line 217, ../sass/screen.scss */
+/* line 207, ../sass/screen.scss */
 .continue:before {
   content: " ";
   display: block;
 }
 
-/* line 222, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 .continue {
   bottom: 0px;
   display: none;
@@ -299,7 +289,7 @@ p {
   font-weight: 900;
 }
 
-/* line 235, ../sass/screen.scss */
+/* line 225, ../sass/screen.scss */
 img {
   display: inline-block;
   width: 180px;
@@ -310,47 +300,58 @@ img {
   vertical-align: middle;
 }
 
-/* line 246, ../sass/screen.scss */
+/* line 236, ../sass/screen.scss */
 iframe {
   margin: 50px auto;
 }
 
-/* line 250, ../sass/screen.scss */
-#final {
-  margin-top: 30px;
+/* line 240, ../sass/screen.scss */
+#finalside {
+  margin-left: 12px;
 }
 
-/* line 254, ../sass/screen.scss */
+/* line 244, ../sass/screen.scss */
+#final {
+  position: absolute;
+  top: 30px;
+}
+
+/* line 249, ../sass/screen.scss */
+#final * {
+  text-align: center;
+}
+
+/* line 253, ../sass/screen.scss */
 .options, .label {
   text-align: center;
 }
 
-/* line 258, ../sass/screen.scss */
+/* line 257, ../sass/screen.scss */
 label > input {
   /* HIDE RADIO */
   display: none;
 }
 
-/* line 261, ../sass/screen.scss */
+/* line 260, ../sass/screen.scss */
 label > input + img {
   /* IMAGE STYLES */
   cursor: pointer;
   border: 2px solid transparent;
 }
 
-/* line 265, ../sass/screen.scss */
+/* line 264, ../sass/screen.scss */
 .selected_btn, .selected_img {
-  border: 4px solid #f5f5f5;
+  border: 7px solid #f5f5f5;
 }
 
 /* ======== Home Page ======== */
-/* line 270, ../sass/screen.scss */
+/* line 269, ../sass/screen.scss */
 #homepage {
   text-align: center;
   top: 135px;
 }
 
-/* line 276, ../sass/screen.scss */
+/* line 275, ../sass/screen.scss */
 .start, .about {
   display: inline-block;
   text-decoration: none;
@@ -360,23 +361,23 @@ label > input + img {
 }
 
 /* ======== All Questions ======== */
-/* line 286, ../sass/screen.scss */
+/* line 285, ../sass/screen.scss */
 form {
   margin-top: 3%;
 }
 
-/* line 289, ../sass/screen.scss */
+/* line 288, ../sass/screen.scss */
 .prompt {
   margin-top: 10%;
 }
 
-/* line 292, ../sass/screen.scss */
+/* line 291, ../sass/screen.scss */
 .continue:before {
   content: " ";
   display: block;
 }
 
-/* line 296, ../sass/screen.scss */
+/* line 295, ../sass/screen.scss */
 .continue {
   bottom: 0px;
   display: none;

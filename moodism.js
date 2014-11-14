@@ -1,18 +1,18 @@
 
 $(document).ready(function() {
     //modal window helpers
-    $('#home').click(function() {
+    $('.home').click(function() {
         $(window).bind('beforeunload', function() {
                 return "Are you sure you want to leave? Your answers to the quiz may be lost.";
             });
         window.location.replace('index.html');
     });
 
-    $('#about').click(function() {
+    $('.aboutbtn').click(function() {
         $(this).next()[0].click();
     });
 
-    $('#contact').click(function() {
+    $('.contact').click(function() {
         $(this).next()[0].click();
     });
 
