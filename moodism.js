@@ -28,7 +28,7 @@ $(document).ready(function() {
             answers[key] = {answer: '', answered: false};
         }
         // go back to homepage
-         window.location.replace('index.html');
+         window.location.replace('question.html');
     });
 
     // initialize app
@@ -134,7 +134,7 @@ $(document).ready(function() {
 
         // ckeck if "you are here" arrow exists
         if( $('.arrow').length ) {
-            $('.arrow').css("display", "none", "important");
+            $('.arrow').css("display", "none", "important"); // if so, remove it
         }
 
         // change pages using animation
