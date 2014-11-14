@@ -1,0 +1,22 @@
+
+/* ======== Final page ======== */
+iframe {
+    margin: 50px auto;
+}
+
+#finalside {
+    margin-left: 12px;
+}
+
+#final {
+    position: relative;
+    top: -130px;
+}
+
+#final * {
+    text-align: center;
+}
+
+.startOver{
+   @extend .textAnswer;
+}

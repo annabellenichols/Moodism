@@ -1,0 +1,21 @@
+
+/* ======== Photo-based Questions ======== */
+.fourPhotos, .twoPhotos {
+    text-align: center;
+}
+#year button[type=button] {
+    font-size: $question-size;
+}
+
+
+
+
+img {
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+    margin: 2px;
+    border: 4px solid #000000;
+    border-radius: 5px;
+    vertical-align: middle;
+}

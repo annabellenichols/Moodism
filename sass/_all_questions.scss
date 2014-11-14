@@ -1,0 +1,41 @@
+
+/* ======== All Questions ======== */
+form {
+    margin-top: 3%;
+}
+
+.prompt {
+    margin-top: 10%;
+}
+
+.options, .label{
+    text-align: center;
+}
+
+label > input { /* HIDE RADIO */
+    display: none;
+}
+
+label > input + img { /* IMAGE STYLES */
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.continue:before {
+    content: " ";
+    display: block;
+}
+
+.continue {
+    @extend .textAnswer;
+    bottom: 0px;
+    display: none;
+    background-color: $main-purple;
+    font-weight: 900;
+    border: 3px solid $cream;
+}
+
+.selected_btn, .selected_img {
+    border: 7px solid $cream;
+}
+

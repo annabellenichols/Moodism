@@ -1,0 +1,23 @@
+
+/* ======== Side Navigation ======== */
+.side {
+    display: block;
+    margin-top: $btn-text;
+    color: $cream;
+    border-radius: 50%;
+    width: $text-size;
+    height: $text-size;
+    font-size: $btn-text;
+    background-color: $main-purple;
+    border: 2px solid $cream;
+    font-family: sans-serif;
+    line-height: 10px;
+}
+
+.nav_btn {
+    @extend .side;
+    margin-left: 80%;
+}
+.past_nav_btn {
+    background-color: $btn-back;
+}

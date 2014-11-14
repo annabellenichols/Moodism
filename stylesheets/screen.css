@@ -1,7 +1,4 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* ======== Main Syling ======== */
 /* line 5, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -69,13 +66,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* ======== Variables ======== */
 @font-family : 'The Girl Next Door', cursive;
-/* ======== Main Syling ======== */
-/* line 24, ../sass/screen.scss */
+/* ======== General Styling ======== */
+/* line 3, ../sass/_general.scss */
 html {
   overflow: hidden;
 }
 
-/* line 28, ../sass/screen.scss */
+/* line 7, ../sass/_general.scss */
 body {
   background-image: url("../images/background.png");
   overflow: hidden;
@@ -85,13 +82,7 @@ body {
   height: 100%;
 }
 
-/* line 37, ../sass/screen.scss */
-#title {
-  text-align: center;
-  padding-top: 50px;
-}
-
-/* line 43, ../sass/screen.scss */
+/* line 16, ../sass/_general.scss */
 #media, #color, #red-place, #blue-place, #green-place, #yellow-place, #dog, #year {
   width: 400px;
   margin: 0px auto;
@@ -99,18 +90,18 @@ body {
   top: -40px;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 24, ../sass/_general.scss */
 #color, #dog {
   top: -80px;
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 28, ../sass/_general.scss */
 #media {
   top: -15px;
 }
 
 /* ======== Fonts + Printing ======== */
-/* line 61, ../sass/screen.scss */
+/* line 35, ../sass/_general.scss */
 h1 {
   color: #a5e8c8;
   font-family: "Bad Script", "The Girl Next Door";
@@ -120,7 +111,7 @@ h1 {
   padding-top: 25px;
 }
 
-/* line 71, ../sass/screen.scss */
+/* line 45, ../sass/_general.scss */
 h2 {
   text-align: center;
   color: #a5e8c8;
@@ -128,7 +119,7 @@ h2 {
   font-size: 45px;
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 53, ../sass/_general.scss */
 p {
   text-align: center;
   color: #a5e8c8;
@@ -136,34 +127,8 @@ p {
   font-size: 35px;
 }
 
-/* ======== Side Navigation ======== */
-/* line 87, ../sass/screen.scss */
-.side, .nav_btn {
-  display: block;
-  margin-top: 25px;
-  color: #f5f5f5;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  font-size: 25px;
-  background-color: #51456c;
-  border: 2px solid #f5f5f5;
-  font-family: sans-serif;
-  line-height: 10px;
-}
-
-/* line 101, ../sass/screen.scss */
-.nav_btn {
-  margin-left: 80%;
-}
-
-/* line 105, ../sass/screen.scss */
-.past_nav_btn {
-  background-color: #7c8093;
-}
-
-/* ======== "About" Modal ======== */
-/* line 110, ../sass/screen.scss */
+/* ======== Modal windows ======== */
+/* line 3, ../sass/_modal.scss */
 .modalDialog {
   position: fixed;
   top: 0;
@@ -180,13 +145,13 @@ p {
   color: black !important;
 }
 
-/* line 126, ../sass/screen.scss */
+/* line 19, ../sass/_modal.scss */
 .modalDialog:target {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 131, ../sass/screen.scss */
+/* line 24, ../sass/_modal.scss */
 .modalDialog > div {
   width: 400px;
   height: 400px;
@@ -198,30 +163,31 @@ p {
   box-sizing: padding-box;
 }
 
-/* line 143, ../sass/screen.scss */
+/* line 36, ../sass/_modal.scss */
 .modalDialog > div > div > * {
   color: #343434;
 }
 
-/* line 147, ../sass/screen.scss */
+/* line 40, ../sass/_modal.scss */
 .modalDialog > div > div > p {
   font-size: 25px;
 }
 
-/* line 151, ../sass/screen.scss */
+/* line 44, ../sass/_modal.scss */
 .modalDialog > div > div {
   position: relative;
   top: 50px;
   margin: 50px 40px 0px 40px;
 }
 
-/* line 157, ../sass/screen.scss */
+/* line 50, ../sass/_modal.scss */
 .modalDialog > div > h2 {
   color: #343434;
   font-size: 45px;
 }
 
-/* line 161, ../sass/screen.scss */
+/* ======== Close buttons of modal ======== */
+/* line 57, ../sass/_modal.scss */
 .close {
   background: #ffffcc;
   color: #f5f5f5;
@@ -240,14 +206,14 @@ p {
   box-shadow: 1px 1px 3px #000;
 }
 
-/* line 178, ../sass/screen.scss */
+/* line 75, ../sass/_modal.scss */
 .close:hover {
   background: #a5e8c8;
 }
 
 /* ======== Text-based Questions ======== */
-/* line 182, ../sass/screen.scss */
-.textAnswer, .continue, .startOver, .start, .about {
+/* line 3, ../sass/_text_question.scss */
+.textAnswer, .continue, .start, .about, .startOver {
   display: block;
   margin: 20px auto;
   width: 200px;
@@ -265,31 +231,17 @@ p {
 }
 
 /* ======== Photo-based Questions ======== */
-/* line 199, ../sass/screen.scss */
+/* line 3, ../sass/_photo_question.scss */
 .fourPhotos, .twoPhotos {
   text-align: center;
 }
 
-/* line 202, ../sass/screen.scss */
+/* line 6, ../sass/_photo_question.scss */
 #year button[type=button] {
   font-size: 45px;
 }
 
-/* line 207, ../sass/screen.scss */
-.continue:before {
-  content: " ";
-  display: block;
-}
-
-/* line 212, ../sass/screen.scss */
-.continue {
-  bottom: 0px;
-  display: none;
-  background-color: #51456c;
-  font-weight: 900;
-}
-
-/* line 225, ../sass/screen.scss */
+/* line 13, ../sass/_photo_question.scss */
 img {
   display: inline-block;
   width: 180px;
@@ -300,58 +252,95 @@ img {
   vertical-align: middle;
 }
 
-/* line 236, ../sass/screen.scss */
-iframe {
-  margin: 50px auto;
+/* ======== All Questions ======== */
+/* line 3, ../sass/_all_questions.scss */
+form {
+  margin-top: 3%;
 }
 
-/* line 240, ../sass/screen.scss */
-#finalside {
-  margin-left: 12px;
+/* line 7, ../sass/_all_questions.scss */
+.prompt {
+  margin-top: 10%;
 }
 
-/* line 244, ../sass/screen.scss */
-#final {
-  position: relative;
-  top: -130px;
-}
-
-/* line 249, ../sass/screen.scss */
-#final * {
-  text-align: center;
-}
-
-/* line 253, ../sass/screen.scss */
+/* line 11, ../sass/_all_questions.scss */
 .options, .label {
   text-align: center;
 }
 
-/* line 257, ../sass/screen.scss */
+/* line 15, ../sass/_all_questions.scss */
 label > input {
   /* HIDE RADIO */
   display: none;
 }
 
-/* line 260, ../sass/screen.scss */
+/* line 19, ../sass/_all_questions.scss */
 label > input + img {
   /* IMAGE STYLES */
   cursor: pointer;
   border: 2px solid transparent;
 }
 
-/* line 264, ../sass/screen.scss */
+/* line 24, ../sass/_all_questions.scss */
+.continue:before {
+  content: " ";
+  display: block;
+}
+
+/* line 29, ../sass/_all_questions.scss */
+.continue {
+  bottom: 0px;
+  display: none;
+  background-color: #51456c;
+  font-weight: 900;
+  border: 3px solid #f5f5f5;
+}
+
+/* line 38, ../sass/_all_questions.scss */
 .selected_btn, .selected_img {
   border: 7px solid #f5f5f5;
 }
 
+/* ======== Side Navigation ======== */
+/* line 3, ../sass/_side_buttons.scss */
+.side, .nav_btn {
+  display: block;
+  margin-top: 25px;
+  color: #f5f5f5;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 25px;
+  background-color: #51456c;
+  border: 2px solid #f5f5f5;
+  font-family: sans-serif;
+  line-height: 10px;
+}
+
+/* line 17, ../sass/_side_buttons.scss */
+.nav_btn {
+  margin-left: 80%;
+}
+
+/* line 21, ../sass/_side_buttons.scss */
+.past_nav_btn {
+  background-color: #7c8093;
+}
+
 /* ======== Home Page ======== */
-/* line 269, ../sass/screen.scss */
+/* line 4, ../sass/_homepage.scss */
+#title {
+  text-align: center;
+  padding-top: 50px;
+}
+
+/* line 10, ../sass/_homepage.scss */
 #homepage {
   text-align: center;
   top: 135px;
 }
 
-/* line 275, ../sass/screen.scss */
+/* line 16, ../sass/_homepage.scss */
 .start, .about {
   display: inline-block;
   text-decoration: none;
@@ -360,28 +349,24 @@ label > input + img {
   border: 4px solid #f5f5f5;
 }
 
-/* ======== All Questions ======== */
-/* line 285, ../sass/screen.scss */
-form {
-  margin-top: 3%;
+/* ======== Final page ======== */
+/* line 3, ../sass/_final.scss */
+iframe {
+  margin: 50px auto;
 }
 
-/* line 288, ../sass/screen.scss */
-.prompt {
-  margin-top: 10%;
+/* line 7, ../sass/_final.scss */
+#finalside {
+  margin-left: 12px;
 }
 
-/* line 291, ../sass/screen.scss */
-.continue:before {
-  content: " ";
-  display: block;
+/* line 11, ../sass/_final.scss */
+#final {
+  position: relative;
+  top: -130px;
 }
 
-/* line 295, ../sass/screen.scss */
-.continue {
-  bottom: 0px;
-  display: none;
-  background-color: #51456c;
-  font-weight: 900;
-  border: 3px solid #f5f5f5;
+/* line 16, ../sass/_final.scss */
+#final * {
+  text-align: center;
 }

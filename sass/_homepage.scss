@@ -1,0 +1,23 @@
+
+/* ======== Home Page ======== */
+
+#title {
+    text-align: center;
+    padding-top: 50px;
+
+}
+
+#homepage {
+    text-align: center;
+    top: $main-size;
+}
+
+
+.start, .about {
+    @extend .textAnswer;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 55px;
+    font-weight: 900;
+    border: 4px solid $cream;
+}
