@@ -8,10 +8,9 @@ html(lang = "en")
 				h1 M
 		div.container_12#main
 			div.grid_2
-				button.side.home(type="button") &#8962
-				button.side.aboutbtn(type="button") ?
-				a(href="#openModal_about")
 				include /about.jade
-				button.side.contact(type="button") &#9993
-				a(href="#openModal_contact")
 				include /contact.jade
+			div.grid_8#questions_container
+				include /media.jade
+			div.grid_2
+				include /rightButtons.jade
