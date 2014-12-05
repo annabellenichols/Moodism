@@ -1,0 +1,181 @@
+/* <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+/******** Variables *******/
+$background-color: #42444d;
+$main-green: #a5e8c8;
+$other-blue: #6FAFB5;
+$cream: #f5f5f5;
+$light-grey: #7c8093;
+$font-family: 'Bad Script', cursive;
+
+/******** For ALL pages!!! ********/
+body{
+	background-image: url("../images/background.png");
+}
+
+/******** Fonts ********/
+h1 {
+	color: $main-green;
+	font-family: $font-family;
+	font-size: 100px;
+	font-style: italic;
+    padding-top: 20px;
+    float: left;
+}
+h2 {
+    text-align: center;
+    color: $main-green;
+    font-family: $font-family;
+    font-size: 35px;
+}
+p {
+    text-align: center;
+    color: $main-green;
+    font-family: $font-family;
+    font-size: 20px;
+}
+form {
+    margin-top: 3%;
+}
+
+/******** Side Navigation ********/
+.side {
+    display: block;
+    margin-bottom: 20px;
+    color: #000000;
+    border-radius: 50%;
+    border: 0px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background-color: $light-grey;
+    border: 1px solid $cream;
+}
+.leftButtons{
+    float:left;
+}
+.rightButtons{
+    float: right;
+}
+
+/******** Home Page ********/
+#homepage {
+    text-align: center;
+    top: 14em;
+}
+.start, .about {
+    @extend .textAnswer;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 55px;
+}
+.modalDialog {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	width: 270px;
+    height: 270px;
+	position: relative;
+    top: 75px;
+    border-radius: 50%;
+	margin: 10% auto;
+	background: $other-blue;
+    padding: 50px 40px 0px 40px;
+    box-sizing: padding-box;
+}
+.modalDialog > div > * {
+    color: #343434;
+}
+.close {
+	background: $other-blue;
+	color: #cream;
+	line-height: 35px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -1px;
+    right: 30px;
+	width: 35px;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 50%;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: $main-green;
+}
+/******** For Text-answer questions ********/
+.textAnswer {
+    display: block;
+    margin: 20px auto 20px auto;
+    width: 200px;
+    height: 60px;
+    font-family: $font-family;
+    font-size: 30px;
+    color: $main-green;
+    background-color: #7c8093;
+    border: 1px solid $cream;
+    box-sizing: border-box;
+    -webkit-border-radius: 7%;
+    -moz-border-radius: 7%;
+    border-radius: 7%;
+}
+/******** For Questions with Images ********/
+label > input{ /* HIDE RADIO */
+    display:none;
+}
+img{ /* (UNCHECKED) IMAGE STYLES */
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
+    border: 2px solid $cream;
+}
+/* Styles the photos as a block*/
+.fourPhotos{
+    text-align: center;
+}
+.twoPhotos{
+    text-align: center;
+}
+/* Styles the individual photos*/
+.fourOptions{
+    @extend img;
+    width: 180px;
+    height: 180px;
+}
+.twoOptions{
+    @extend img;
+    margin: 3px;
+    width: 275px;
+    height: 275px;
+}
+/******** Question Content ********/
+.prompt {
+    margin-top: 10%;
+}
+.continue {
+    @extend .textAnswer;
+    position: relative;
+    display: none;
+}
