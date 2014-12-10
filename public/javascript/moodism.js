@@ -86,7 +86,6 @@ $(document).ready(function() {
     /* Returns current question's name */
     function getQuestion() {
         var question = $form.parent().attr('id');
-        console.log(question);
         if (question.indexOf('_') !== -1) { // if it contains an underscore
             // then the question's name is what appears after the _
             question = question.split('_')[1];
@@ -260,6 +259,7 @@ $(document).ready(function() {
         } else {
             // load final page
             window.location.replace('final');
+            console.log(answers);
         }
     }
 
