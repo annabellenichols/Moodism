@@ -13,7 +13,7 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, '/public')));
-app.use(express.static(path.join(__dirname, '/images')));
+app.use(express.static(path.join(__dirname, 'public/images')));
 
 var db = mongoskin.db('mongodb://moodist:moodism4ever@ds061620.mongolab.com:61620/output', {safe: true});
 var collections = { tokens: db.collection('tokens') };
