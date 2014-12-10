@@ -1,0 +1,107 @@
+//Media
+div#media
+	h2 Pick a media type:
+
+	form.options
+		label
+			input(type="radio" name="answer" value="photo")
+			button(type="button").textAnswer Photo
+		label
+			input(type="radio" name="answer" value="video")
+			button(type="button").textAnswer Video
+		label
+			input(type="radio" name="answer" value="poem")
+			button(type="button").textAnswer Poem
+		button(type="submit").continue Continue
+
+//Colors
+div#color
+	h2 Pick a color:
+
+	form.fourPhotos
+		label
+			input(type='radio' name='color' value='red')
+			img(width="180px" height="180px" src='images/red.jpg')
+		label
+			input(type='radio' name='color' value='blue')
+			img(width="180px" height="180px" src='images/blue.jpg')
+		label
+			input(type='radio' name='color' value='yellow')
+			img(width="180px" height="180px" src='images/yellow.jpg')
+		label
+			input(type='radio' name='color' value='greem')
+			img(src='images/green.jpg')
+
+// Places
+div#blue_place
+    h2 Where would you rather be?
+    form.twoPhotos
+        label
+            input(type="radio" name="place" value="cookies")
+            img(width="100px" height="80px" src="images/cookies.jpg")
+        label
+            input(type="radio" name="place" value="beach")
+            img(width="100px" height="80px" src="images/beach.jpg")
+
+div#green_place
+    h2 Where would you rather be?
+    form.twoPhotos
+        label
+            input(type="radio" name="place" value="picnic")
+            img(width="100px" height="80px" src="images/picnic.jpg")
+        label
+            input(type="radio" name="place" value="jogging")
+            img(width="100px" height="80px" src="images/jogging.jpg")
+
+div#yellow_place
+    h2 Where would you rather be?
+    form.twoPhotos
+        label
+            input(type="radio" name="place" value="beach")
+            img(width="100px" height="80px" src="images/beach.jpg")
+        label
+            input(type="radio" name="place" value="concert")
+            img(width="100px" height="80px" src="images/concert.jpg")
+
+div#red_place
+    h2 Where would you rather be?
+    form.twoPhotos
+        label
+            input(type="radio" name="place" value="boxing")
+            img(width="100px" height="80px" src="images/boxing.jpg")
+        label
+            input(type="radio" name="place" value="concert")
+            img(width="100px" height="80px" src="images/concert.jpg")
+
+//Dog
+div#dog
+	h2 Choose a dog:
+	form.fourPhotos
+		label
+			input(type="radio" name="dog" value="happyDog")
+			img(width="180px" height="180px" src="images/happyDog.jpg")
+		label
+			input(type="radio" name="dog" value="sillyDog")
+			img(width="180px" height="180px" src="images/sillyDog.jpg")
+		label
+			input(type="radio" name="dog" value="sleepyDog")
+			img(width="180px" height="180px" src="images/sleepyDog.jpg")
+		label
+			input(type="radio" name="dog" value="sadDog")
+			img(width="180px" height="180px" src="images/sadDog.jpg")
+
+//Year
+div#year
+	form.options
+		label
+			input(type="radio" name="year" value="1800")
+			button(type="button").textAnswer 1800
+		label
+			input(type="radio" name="year" value="1920")
+			button(type="button").textAnswer 1920
+		label
+			input(type="radio" name="year" value="1963")
+			button(type="button").textAnswer 1963
+		label
+			input(type="radio" name="year" value="2014")
+			button(type="button").textAnswer 2014
