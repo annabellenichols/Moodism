@@ -5,7 +5,7 @@ $(document).ready(function() {
         $(window).bind('beforeunload', function() {
                 return "Are you sure you want to leave? Your answers to the quiz may be lost.";
             });
-        window.location.replace('index.html');
+        window.location.replace('homepage.jade');
     });
 
     $('.aboutbtn').click(function() {
@@ -18,7 +18,7 @@ $(document).ready(function() {
 
     // start with homepage
      $('.start').click(function() {
-         window.location.replace('question.html');
+         window.location.replace('question.jade');
     });
 
     // final page's start over

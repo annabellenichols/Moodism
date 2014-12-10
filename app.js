@@ -26,7 +26,11 @@ app.use(function(req, res, next) {
 })
 
 app.get('/', function(req, res){
-  res.render('index', {});
+  res.render('homepage', {});
+})
+
+app.get('/question', function(req, res){
+  res.render('question', {});
 })
 
 server.listen(8080, function() {

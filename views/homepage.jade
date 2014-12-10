@@ -1,6 +1,17 @@
-div.grid12#homepage
-	h1#title Moodism
-	p a fun quiz to discover your mood
-	button.start(type="text") Start
-	a.about(href="#openModal") About
-	
+doctype html
+html(lang = "en")
+    head
+        title Moodism
+        style(type="text/css")
+            include ../public/stylesheets/screen.css
+            include ../public/stylesheets/grid.css
+        link(href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door', rel='stylesheet', type="text/css")        
+        script(src='http://code.jquery.com/jquery-1.11.0.min.js')
+        script
+            include ../public/javascript/moodism.js
+    body
+        div.grid12#homepage
+           h1#title Moodism
+           p a fun quiz to discover your mood
+           button.start(type="text") Start
+           a.about(href="#openModal") About
