@@ -29,6 +29,10 @@ app.get('/', function(req, res){
   res.render('homepage', {});
 })
 
+app.get('/homepage', function(req, res){
+  res.render('homepage', {});
+})
+
 app.get('/question', function(req, res){
   res.render('question', {});
 })

@@ -5,7 +5,7 @@ $(document).ready(function() {
         $(window).bind('beforeunload', function() {
                 return "Are you sure you want to leave? Your answers to the quiz may be lost.";
             });
-        window.location.replace('homepage.jade');
+        window.location.replace('homepage');
     });
 
     $('.aboutbtn').click(function() {
@@ -18,7 +18,7 @@ $(document).ready(function() {
 
     // start with homepage
      $('.start').click(function() {
-         window.location.replace('question.jade');
+         window.location.replace('question');
     });
 
     // final page's start over
@@ -28,7 +28,7 @@ $(document).ready(function() {
             answers[key] = {answer: '', answered: false};
         }
         // go back to homepage
-         window.location.replace('question.html');
+         window.location.replace('question');
     });
 
     // initialize app
@@ -258,7 +258,7 @@ $(document).ready(function() {
             loadQuestion(questions[currentIndex + 1]);
         } else {
             // load final page
-            window.location.replace('final.html');
+            window.location.replace('final');
         }
     }
 
