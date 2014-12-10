@@ -13,6 +13,7 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/images')));
 
 var db = mongoskin.db('mongodb://moodist:moodism4ever@ds061620.mongolab.com:61620/output', {safe: true});
 var collections = { tokens: db.collection('tokens') };
@@ -35,6 +36,10 @@ app.get('/homepage', function(req, res){
 
 app.get('/question', function(req, res){
   res.render('question', {});
+})
+
+app.get('/questions', function(req, res){
+  res.render('questions', {});
 })
 
 server.listen(8080, function() {

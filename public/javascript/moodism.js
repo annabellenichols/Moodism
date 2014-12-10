@@ -86,6 +86,7 @@ $(document).ready(function() {
     /* Returns current question's name */
     function getQuestion() {
         var question = $form.parent().attr('id');
+        console.log(question);
         if (question.indexOf('_') !== -1) { // if it contains an underscore
             // then the question's name is what appears after the _
             question = question.split('_')[1];
@@ -185,7 +186,7 @@ $(document).ready(function() {
         // load new question
         // interactive question requires diferent handling
         if (newQuestion === 'place') {
-           $tempContainer.load('questions.html #' + answers.color.answer + '_' + newQuestion, function(){ // on content loaded
+           $tempContainer.load('questions #' + answers.color.answer + '_' + newQuestion, function(){ // on content loaded
                 // animate slide
                 $questionContainer.animate({
                     top: slideDirection + containerHeight + 'px',
@@ -197,7 +198,7 @@ $(document).ready(function() {
                    });
             });
         } else { // generic handling
-            $tempContainer.load('questions.html #' + newQuestion, function(){ // on content loaded
+            $tempContainer.load('questions #' + newQuestion, function(){ // on content loaded
                 // animate slide
                 $questionContainer.animate({
                     top: slideDirection + containerHeight + 'px',
