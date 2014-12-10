@@ -42,6 +42,11 @@ app.get('/questions', function(req, res){
   res.render('questions', {});
 })
 
+
+app.get('/final', function(req, res){
+  res.render('final', {});
+})
+
 server.listen(8080, function() {
 	var host = server.address().address;
 	var port = server.address().port;
