@@ -36,16 +36,13 @@ $(document).ready(function() {
     var questions = ['media', 'color', 'place', 'dog', 'year'];
 
     // remember answers using answer obj:
-    var answers = {};
-
+    answers = {};
     questions.forEach(function(key) {
         answers[key] = {};
     });
-
     for (key in answers) {
         answers[key] = {answer: '', answered: false};
     }
-
 
     /*
      * Initializes the app, and add event listeners
@@ -257,9 +254,12 @@ $(document).ready(function() {
         if (currentIndex < 4) { // if not last question
             loadQuestion(questions[currentIndex + 1]);
         } else {
+            // save answers on session storage
+            sessionStorage.setItem('answers', JSON.stringify(answers));
+
             // load final page
             window.location.replace('final');
-            console.log(answers);
+            alert(answers);
         }
     }
 
@@ -336,18 +336,12 @@ $(document).ready(function() {
 
     // add event listeners on mouse wheel to allow to navigate between questions (via scrolling)
     $(window).bind('mousewheel', function(event) {
-    if (event.originalEvent.wheelDelta >= 0) {
-        scrollNext();
-    }
-    else {
-        scrollPrevious();
-    }
-
-
-});
-
-    // TODO:
-    // session storage for answers (use for final screen)
-
+        if (event.originalEvent.wheelDelta >= 0) {
+            scrollNext();
+        }
+        else {
+            scrollPrevious();
+        }
+    });
 });
 
