@@ -6,7 +6,6 @@ html(lang = "en")
             include ../public/stylesheets/screen.css
             include ../public/stylesheets/grid.css
         link(href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door', rel='stylesheet', type="text/css")
-        script(src='/socket.io/socket.io.js')
         script(src='http://code.jquery.com/jquery-1.11.0.min.js')
         script
             include ../public/javascript/final.js
@@ -22,7 +21,7 @@ html(lang = "en")
                 h2 We matched your mood to this song.
                 p Enjoy!
                 center
-                  p hello
+                  div#token
                 p Thanks for visiting, and have a 'Mood-iful' day!
                 center
                   button.startOver Start Over

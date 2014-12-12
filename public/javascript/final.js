@@ -1,8 +1,8 @@
 
 $(document).ready(function() {
 
-    var url = 'https://localhost:8080/final';
-    var socket = io.connect(url);
+    var url = 'http://localhost:8080/final';
+//    var socket = io.connect(url);
 
     //modal window helpers
     $('.home').click(function() {
@@ -33,7 +33,7 @@ $(document).ready(function() {
     // retrieve quiz answers from session storage
     answers = JSON.parse(sessionStorage.getItem('answers'));
 
-    var results = {media: answers.media.answer, mood: '', time: answers.year.answer};
+    var results = {type: answers.media.answer, mood: '', year: answers.year.answer};
     var mood = {happy: 0, pumped:0, moody:0};
 
     var dog = answers.dog.answer;
@@ -66,13 +66,45 @@ $(document).ready(function() {
 
     results.mood = winner;
 
-    socket.emit('downloadToken',{
-			'results': results
+    var query = url + "/token";
+    $.ajax({
+        // the URL for the request
+        url: query,
+        type: "POST",
+        cache: false,
+        contentType: 'application/json',
+        dataType : "json",
+        data: JSON.stringify( {results: results }),
+
+        // code to run if the request succeeds;
+        // the response is passed to the function
+        success: function( json ) {
+            console.log( json );
+            if (json.type == "music") {
+                console.log("music!");
+                $('#token').append('<iframe width="560" height="315" src="http://www.youtube.com/embed/wOwblaKmyVw" frameborder="0" allowfullscreen></iframe>')
+            }
+        },
+
+        // code to run if the request fails; the raw request and
+        // status codes are passed to the function
+        error: function( xhr, status, errorThrown ) {
+            alert( "Sorry, there was a problem!" );
+            console.log( "Error: " + errorThrown );
+            console.log( "Status: " + status );
+            console.dir( xhr );
+            console.log( xhr.statusText );
+        }
     });
 
-    socket.on('displayToken', function (data) {
-        alert("hello");
-		alert(data);
-	});
+
+//    socket.emit('downloadToken',{
+//			'results': results
+//    });
+//
+//    socket.on('displayToken', function (data) {
+//        alert("hello");
+//		console.log(data);
+//	});
 });
 
