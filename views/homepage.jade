@@ -10,8 +10,10 @@ html(lang = "en")
         script
             include ../public/javascript/moodism.js
     body
-        div.grid12#homepage
-           h1#title Moodism
-           p a fun quiz to discover your mood
-           button.start(type="text") Start
-           a.about(href="#openModal") About
+        div.container_12
+            div.grid12#homepage
+                h1#title Moodism
+                p a fun quiz to discover your mood
+                button.start(type="text") Start
+                a.about(href="#openModal") About
+                include modal.jade

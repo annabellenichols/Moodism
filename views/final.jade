@@ -7,49 +7,23 @@ html(lang = "en")
             include ../public/stylesheets/grid.css
         link(href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door', rel='stylesheet', type="text/css")        
         script(src='http://code.jquery.com/jquery-1.11.0.min.js')
+        script
+            include ../public/javascript/moodism.js
         script.
             answers = JSON.parse(sessionStorage.getItem('answers'));
     body
-        .container_12
-          .grid_12
-          h1 M
-        #finalside.grid_1
-         button.side.home(type='button') ⌂
-         button.side.aboutbtn(type='button') ?
-         a(href='#openModal_about_final')
-         #openModal_about_final.modalDialog
-          div
-            div
-              a.close(href='#close', title='Close') X
-              h2 About
-              p
-                | This website caters to your mood. We'll celebrate victories with you and cheer you up when you're blue.
-              p
-                | You only need to answer a few short questions and you will be rewarded with a mood token at the end.
-              p Enjoy!
-        button.side.contact(type='button') ✉
-        a(href='#openModal_contact_final')
-        #openModal_contact_final.modalDialog
-          div
-            div
-              a.close(href='#close', title='Close') X
-              h2 Contact Us
-              p We're three seniors at Macalester. Contact us at:
-              br
-              p
-                | Barbara:
-                a(href='mailto:bborgesr@macalester.edu?Subject=Moodism%20Website', target='_top') bborgesr@macalester.edu
-              p
-                | Annabelle:
-                a(href='mailto:anichol1@macalester.edu?Subject=Moodism%20Website', target='_top') anichol1@macalester.edu
-              p
-                | Judy:
-                a(href='mailto:jsyrkinn@macalester.edu?Subject=Moodism%20Website', target='_top') jsyrkinn@macalester.edu
-      #final.grid_10
-        h2 We matched your mood to this song.
-        p Enjoy!
-        center
-          iframe(width='560', height='315', src='https://www.youtube.com/embed/wOwblaKmyVw', frameborder='0', allowfullscreen='')
-        p Thanks for visiting, and have a 'Mood-iful' day!
-        center
-          button.startOver Start Over
+        div.container_12
+            div.grid_12
+                h1 M
+        div.container_12#main
+            div.grid_2
+                include about.jade
+                include contact.jade
+            div.grid_8#final
+                h2 We matched your mood to this song.
+                p Enjoy!
+                center
+                  iframe(width='560', height='315', src='https://www.youtube.com/embed/wOwblaKmyVw', frameborder='0', allowfullscreen='')
+                p Thanks for visiting, and have a 'Mood-iful' day!
+                center
+                  button.startOver Start Over
