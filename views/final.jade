@@ -5,12 +5,11 @@ html(lang = "en")
         style(type="text/css")
             include ../public/stylesheets/screen.css
             include ../public/stylesheets/grid.css
-        link(href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door', rel='stylesheet', type="text/css")        
+        link(href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door', rel='stylesheet', type="text/css")
+        script(src='/socket.io/socket.io.js')
         script(src='http://code.jquery.com/jquery-1.11.0.min.js')
         script
-            include ../public/javascript/moodism.js
-        script.
-            answers = JSON.parse(sessionStorage.getItem('answers'));
+            include ../public/javascript/final.js
     body
         div.container_12
             div.grid_12
@@ -23,7 +22,7 @@ html(lang = "en")
                 h2 We matched your mood to this song.
                 p Enjoy!
                 center
-                  iframe(width='560', height='315', src='https://www.youtube.com/embed/wOwblaKmyVw', frameborder='0', allowfullscreen='')
+                  p hello
                 p Thanks for visiting, and have a 'Mood-iful' day!
                 center
                   button.startOver Start Over

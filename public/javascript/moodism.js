@@ -3,7 +3,7 @@ $(document).ready(function() {
     //modal window helpers
     $('.home').click(function() {
         $(window).bind('beforeunload', function() {
-                return "Are you sure you want to leave? Your answers to the quiz may be lost.";
+                return "Your answers to the quiz may be lost.";
             });
         window.location.replace('homepage');
     });
@@ -18,16 +18,6 @@ $(document).ready(function() {
 
     // start with homepage
      $('.start').click(function() {
-         window.location.replace('question');
-    });
-
-    // final page's start over
-    $('.startOver').click(function() {
-        // clean answers
-        for (key in answers) {
-            answers[key] = {answer: '', answered: false};
-        }
-        // go back to homepage
          window.location.replace('question');
     });
 
@@ -259,7 +249,6 @@ $(document).ready(function() {
 
             // load final page
             window.location.replace('final');
-            alert(answers);
         }
     }
 

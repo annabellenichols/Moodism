@@ -1,25 +1,25 @@
 doctype html
 html(lang = "en")
-	head
-		title Moodism
-		style(type="text/css")
-			include ../public/stylesheets/screen.css
-			include ../public/stylesheets/grid.css
-		link(href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door', rel='stylesheet', type="text/css")        
-		script(src='http://code.jquery.com/jquery-1.11.0.min.js')
-		script.
-			flag = true
-		script
-			include ../public/javascript/moodism.js
-	body
-		div.container_12
-			div.grid_12
-				h1 M
-		div.container_12#main
-			div.grid_2
-				include about.jade
-				include contact.jade
-			div.grid_8#questions_container
-				include media.jade
-			div.grid_2
-				include rightButtons.jade
+    head
+        title Moodism
+        style(type="text/css")
+            include ../public/stylesheets/screen.css
+            include ../public/stylesheets/grid.css
+        link(href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door', rel='stylesheet', type="text/css")        
+        script(src='http://code.jquery.com/jquery-1.11.0.min.js')
+        script
+            include ../public/javascript/moodism.js
+    body
+        div.container_12
+            div.grid_12
+                h1 M
+        div.container_12#main
+            div.grid_2
+                include about.jade
+                include contact.jade
+            div.grid_8#questions_container
+                include media.jade
+            div.grid_2
+                div.arrow you are here
+            div.grid_0
+                include rightButtons.jade
