@@ -17,6 +17,22 @@ iframe {
     text-align: center;
 }
 
+
+#token p:first-child, {
+    padding-top: 50px;
+}
+
+#token p:last-child, {
+    padding-bottom: 50px;
+}
+
+#token p {
+    font-family: sans-serif;
+    color: $cream;
+    font-size: $btn-text;
+    padding: 5px;
+}
+
 .startOver{
    @extend .textAnswer;
 }

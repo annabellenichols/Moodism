@@ -66,6 +66,9 @@ $(document).ready(function() {
 
     results.mood = winner;
 
+    $('body').css("overflow-y", "visible", "important");
+    $('body').css("height", "100%", "important");
+
     var query = url + "/token";
     $.ajax({
         // the URL for the request
@@ -81,8 +84,20 @@ $(document).ready(function() {
         success: function( json ) {
             console.log( json );
             if (json.type == "music") {
-                console.log("music!");
-                $('#token').append('<iframe width="560" height="315" src="http://www.youtube.com/embed/wOwblaKmyVw" frameborder="0" allowfullscreen></iframe>')
+                $('#token').append('<iframe width="560" height="315" src="http:' +
+                                   json.src + '" frameborder="0" allowfullscreen></iframe>');
+            }
+            if (json.type == "photo") {
+                $('#token').append('<img scr=' + json.src + ' width="560px" height="315px">');
+            }
+            if (json.type == "poem") {
+                if (json.title == "OCD" || json.title == "Boy Meets World") {
+                    $('#token').append('<iframe width="560" height="315" src="http:' +
+                                       json.src + '" frameborder="0" allowfullscreen></iframe>');
+                }
+                else {
+                    $('#token').append(json.src);
+                }
             }
         },
 

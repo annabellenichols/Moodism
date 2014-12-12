@@ -314,7 +314,7 @@ a {
   font-size: 45px;
 }
 
-/* line 13, ../sass/_photo_question.scss */
+/* line 10, ../sass/_photo_question.scss */
 img {
   display: inline-block;
   width: 180px;
@@ -443,4 +443,22 @@ iframe {
 /* line 16, ../sass/_final.scss */
 #final * {
   text-align: center;
+}
+
+/* line 21, ../sass/_final.scss */
+#token p:first-child {
+  padding-top: 50px;
+}
+
+/* line 25, ../sass/_final.scss */
+#token p:last-child {
+  padding-bottom: 50px;
+}
+
+/* line 29, ../sass/_final.scss */
+#token p {
+  font-family: sans-serif;
+  color: #f5f5f5;
+  font-size: 25px;
+  padding: 5px;
 }
