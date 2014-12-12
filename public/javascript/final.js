@@ -96,7 +96,7 @@ $(document).ready(function() {
                                        json.src + '" frameborder="0" allowfullscreen></iframe>');
                 }
                 else {
-                    $('#token').append(json.src);
+                    $('#token').append('<h5>' + json.title + ' by ' + json.author + '</h5>' + json.src);
                 }
             }
         },

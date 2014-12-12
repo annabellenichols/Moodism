@@ -29,8 +29,15 @@ iframe {
 #token p {
     font-family: sans-serif;
     color: $cream;
-    font-size: $btn-text;
+    font-size: 20px;
     padding: 5px;
+}
+
+#token h5 {
+    font-family: sans-serif;
+    color: $cream;
+    font-size: 30px;
+    padding: 50px;
 }
 
 .startOver{
