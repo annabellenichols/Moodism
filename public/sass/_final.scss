@@ -33,11 +33,19 @@ iframe {
     padding: 5px;
 }
 
-#token h5 {
+#token h5{
     font-family: sans-serif;
     color: $cream;
     font-size: 30px;
     padding: 50px;
+}
+
+#token img {
+    border: 0px;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30px;
+    padding-top: 10px;
 }
 
 .startOver{

@@ -88,7 +88,7 @@ $(document).ready(function() {
                                    json.src + '" frameborder="0" allowfullscreen></iframe>');
             }
             if (json.type == "photo") {
-                $('#token').append('<img scr=' + json.src + ' width="560px" height="315px">');
+                $('#token').append('<h5>' + json.title + '<img src=' + json.src + '>');
             }
             if (json.type == "poem") {
                 if (json.title == "OCD" || json.title == "Boy Meets World") {

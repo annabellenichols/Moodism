@@ -470,3 +470,12 @@ iframe {
   font-size: 30px;
   padding: 50px;
 }
+
+/* line 43, ../sass/_final.scss */
+#token img {
+  border: 0px;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
