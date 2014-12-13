@@ -111,15 +111,5 @@ $(document).ready(function() {
             console.log( xhr.statusText );
         }
     });
-
-
-//    socket.emit('downloadToken',{
-//			'results': results
-//    });
-//
-//    socket.on('displayToken', function (data) {
-//        alert("hello");
-//		console.log(data);
-//	});
 });
 
